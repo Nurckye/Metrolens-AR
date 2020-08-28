@@ -3,29 +3,86 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1708FEE724F94C750054197A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708FEE624F94C750054197A /* AppDelegate.swift */; };
 		1708FEE924F94C750054197A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708FEE824F94C750054197A /* SceneDelegate.swift */; };
 		1708FEEC24F94C750054197A /* MetrolensAR.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1708FEEA24F94C750054197A /* MetrolensAR.xcdatamodeld */; };
-		1708FEEE24F94C750054197A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708FEED24F94C750054197A /* ContentView.swift */; };
 		1708FEF024F94C790054197A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1708FEEF24F94C790054197A /* Assets.xcassets */; };
 		1708FEF324F94C790054197A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1708FEF224F94C790054197A /* Preview Assets.xcassets */; };
 		1708FEF624F94C790054197A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1708FEF424F94C790054197A /* LaunchScreen.storyboard */; };
+		1708FF1B24F950820054197A /* CameraARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708FEFD24F950800054197A /* CameraARView.swift */; };
+		1708FF1C24F950820054197A /* BottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708FEFE24F950800054197A /* BottomBar.swift */; };
+		1708FF1D24F950820054197A /* asImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708FEFF24F950800054197A /* asImage.swift */; };
+		1708FF1E24F950820054197A /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708FF0024F950800054197A /* LineChartView.swift */; };
+		1708FF2024F950820054197A /* LikesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708FF0224F950800054197A /* LikesView.swift */; };
+		1708FF2124F950820054197A /* BottomBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708FF0324F950800054197A /* BottomBarItem.swift */; };
+		1708FF2224F950820054197A /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708FF0424F950800054197A /* DiscoverView.swift */; };
+		1708FF2424F950820054197A /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708FF0624F950800054197A /* LottieView.swift */; };
+		1708FF2524F950820054197A /* InitialScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708FF0724F950810054197A /* InitialScreen.swift */; };
+		1708FF2624F950820054197A /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708FF0824F950810054197A /* Card.swift */; };
+		1708FF2724F950820054197A /* ARLocationPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708FF0924F950810054197A /* ARLocationPoint.swift */; };
+		1708FF2824F950820054197A /* MapWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708FF0A24F950810054197A /* MapWrapper.swift */; };
+		1708FF2A24F950820054197A /* BottomBarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708FF0C24F950810054197A /* BottomBarItemView.swift */; };
+		1708FF2B24F950820054197A /* DiscoverWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708FF0D24F950810054197A /* DiscoverWrapper.swift */; };
+		1708FF2C24F950820054197A /* addFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708FF0E24F950810054197A /* addFilter.swift */; };
+		1708FF2D24F950820054197A /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708FF0F24F950810054197A /* MapView.swift */; };
+		1708FF2E24F950820054197A /* CameraARWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708FF1024F950810054197A /* CameraARWrapper.swift */; };
+		1708FF2F24F950820054197A /* NavigationLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708FF1124F950820054197A /* NavigationLocation.swift */; };
+		1708FF3024F950820054197A /* LocationPresentationPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708FF1224F950820054197A /* LocationPresentationPreview.swift */; };
+		1708FF3124F950820054197A /* isHidden.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708FF1324F950820054197A /* isHidden.swift */; };
+		1708FF3224F950820054197A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708FF1424F950820054197A /* ContentView.swift */; };
+		1708FF3324F950820054197A /* CameraARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708FF1524F950820054197A /* CameraARViewController.swift */; };
+		1708FF3424F950820054197A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708FF1624F950820054197A /* MapViewController.swift */; };
+		1708FF3524F950820054197A /* ContentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708FF1724F950820054197A /* ContentPicker.swift */; };
+		1708FF3624F950820054197A /* SmallAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708FF1824F950820054197A /* SmallAction.swift */; };
+		1708FF3824F950820054197A /* BarBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708FF1A24F950820054197A /* BarBuilder.swift */; };
+		1708FF3B24F958B10054197A /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 1708FF3A24F958B10054197A /* SwiftUICharts */; };
+		1708FF3D24F95BA70054197A /* CardPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708FF3C24F95BA70054197A /* CardPreview.swift */; };
+		93330B6E2974FF9C0C96E4C0 /* Pods_MetrolensAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F32C70B43A5091874E379FC0 /* Pods_MetrolensAR.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02CEB1FC856D1862CD78660F /* Pods-MetrolensAR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetrolensAR.release.xcconfig"; path = "Target Support Files/Pods-MetrolensAR/Pods-MetrolensAR.release.xcconfig"; sourceTree = "<group>"; };
 		1708FEE324F94C750054197A /* MetrolensAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetrolensAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1708FEE624F94C750054197A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1708FEE824F94C750054197A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1708FEEB24F94C750054197A /* MetrolensAR.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MetrolensAR.xcdatamodel; sourceTree = "<group>"; };
-		1708FEED24F94C750054197A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1708FEEF24F94C790054197A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1708FEF224F94C790054197A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1708FEF524F94C790054197A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1708FEF724F94C790054197A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1708FEFD24F950800054197A /* CameraARView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraARView.swift; sourceTree = "<group>"; };
+		1708FEFE24F950800054197A /* BottomBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomBar.swift; sourceTree = "<group>"; };
+		1708FEFF24F950800054197A /* asImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = asImage.swift; sourceTree = "<group>"; };
+		1708FF0024F950800054197A /* LineChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
+		1708FF0224F950800054197A /* LikesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikesView.swift; sourceTree = "<group>"; };
+		1708FF0324F950800054197A /* BottomBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomBarItem.swift; sourceTree = "<group>"; };
+		1708FF0424F950800054197A /* DiscoverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
+		1708FF0624F950800054197A /* LottieView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		1708FF0724F950810054197A /* InitialScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialScreen.swift; sourceTree = "<group>"; };
+		1708FF0824F950810054197A /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		1708FF0924F950810054197A /* ARLocationPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARLocationPoint.swift; sourceTree = "<group>"; };
+		1708FF0A24F950810054197A /* MapWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapWrapper.swift; sourceTree = "<group>"; };
+		1708FF0C24F950810054197A /* BottomBarItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomBarItemView.swift; sourceTree = "<group>"; };
+		1708FF0D24F950810054197A /* DiscoverWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverWrapper.swift; sourceTree = "<group>"; };
+		1708FF0E24F950810054197A /* addFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addFilter.swift; sourceTree = "<group>"; };
+		1708FF0F24F950810054197A /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		1708FF1024F950810054197A /* CameraARWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraARWrapper.swift; sourceTree = "<group>"; };
+		1708FF1124F950820054197A /* NavigationLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationLocation.swift; sourceTree = "<group>"; };
+		1708FF1224F950820054197A /* LocationPresentationPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationPresentationPreview.swift; sourceTree = "<group>"; };
+		1708FF1324F950820054197A /* isHidden.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = isHidden.swift; sourceTree = "<group>"; };
+		1708FF1424F950820054197A /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1708FF1524F950820054197A /* CameraARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraARViewController.swift; sourceTree = "<group>"; };
+		1708FF1624F950820054197A /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		1708FF1724F950820054197A /* ContentPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentPicker.swift; sourceTree = "<group>"; };
+		1708FF1824F950820054197A /* SmallAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallAction.swift; sourceTree = "<group>"; };
+		1708FF1A24F950820054197A /* BarBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarBuilder.swift; sourceTree = "<group>"; };
+		1708FF3C24F95BA70054197A /* CardPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPreview.swift; sourceTree = "<group>"; };
+		34DC646FE7D712E50B0ED491 /* Pods-MetrolensAR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetrolensAR.debug.xcconfig"; path = "Target Support Files/Pods-MetrolensAR/Pods-MetrolensAR.debug.xcconfig"; sourceTree = "<group>"; };
+		F32C70B43A5091874E379FC0 /* Pods_MetrolensAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MetrolensAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +90,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93330B6E2974FF9C0C96E4C0 /* Pods_MetrolensAR.framework in Frameworks */,
+				1708FF3B24F958B10054197A /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C1F06EB129D1225E110406B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				34DC646FE7D712E50B0ED491 /* Pods-MetrolensAR.debug.xcconfig */,
+				02CEB1FC856D1862CD78660F /* Pods-MetrolensAR.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		1708FEDA24F94C750054197A = {
 			isa = PBXGroup;
 			children = (
 				1708FEE524F94C750054197A /* MetrolensAR */,
 				1708FEE424F94C750054197A /* Products */,
+				0C1F06EB129D1225E110406B /* Pods */,
+				B228DA37A9CF2C7D5153863A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,9 +128,12 @@
 		1708FEE524F94C750054197A /* MetrolensAR */ = {
 			isa = PBXGroup;
 			children = (
+				1768FF1124F9B02C003A6AE3 /* Extensions */,
+				1768FF1024F9AFA8003A6AE3 /* Controllers */,
+				1768FF0F24F9AFA2003A6AE3 /* Views */,
+				1768FF0E24F9AF9A003A6AE3 /* Models */,
 				1708FEE624F94C750054197A /* AppDelegate.swift */,
 				1708FEE824F94C750054197A /* SceneDelegate.swift */,
-				1708FEED24F94C750054197A /* ContentView.swift */,
 				1708FEEF24F94C790054197A /* Assets.xcassets */,
 				1708FEF424F94C790054197A /* LaunchScreen.storyboard */,
 				1708FEF724F94C790054197A /* Info.plist */,
@@ -78,6 +151,133 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		1768FF0E24F9AF9A003A6AE3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1708FF1124F950820054197A /* NavigationLocation.swift */,
+				1708FF0824F950810054197A /* Card.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1768FF0F24F9AFA2003A6AE3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1708FF3C24F95BA70054197A /* CardPreview.swift */,
+				1708FF1224F950820054197A /* LocationPresentationPreview.swift */,
+				1708FF0924F950810054197A /* ARLocationPoint.swift */,
+				1708FF0624F950800054197A /* LottieView.swift */,
+				1708FF1824F950820054197A /* SmallAction.swift */,
+				1768FF1224F9B038003A6AE3 /* BottomBar */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1768FF1024F9AFA8003A6AE3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1768FF1924F9B4DD003A6AE3 /* Charts */,
+				1768FF1824F9B4C4003A6AE3 /* InitialScreen */,
+				1768FF1724F9B4B7003A6AE3 /* Discover */,
+				1768FF1624F9B4AC003A6AE3 /* CameraAR */,
+				1768FF1524F9B489003A6AE3 /* Content */,
+				1768FF1424F9B47F003A6AE3 /* Map */,
+				1768FF1324F9B470003A6AE3 /* Likes */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1768FF1124F9B02C003A6AE3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1708FF0E24F950810054197A /* addFilter.swift */,
+				1708FEFF24F950800054197A /* asImage.swift */,
+				1708FF1324F950820054197A /* isHidden.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1768FF1224F9B038003A6AE3 /* BottomBar */ = {
+			isa = PBXGroup;
+			children = (
+				1708FF1A24F950820054197A /* BarBuilder.swift */,
+				1708FEFE24F950800054197A /* BottomBar.swift */,
+				1708FF0324F950800054197A /* BottomBarItem.swift */,
+				1708FF0C24F950810054197A /* BottomBarItemView.swift */,
+			);
+			path = BottomBar;
+			sourceTree = "<group>";
+		};
+		1768FF1324F9B470003A6AE3 /* Likes */ = {
+			isa = PBXGroup;
+			children = (
+				1708FF0224F950800054197A /* LikesView.swift */,
+			);
+			path = Likes;
+			sourceTree = "<group>";
+		};
+		1768FF1424F9B47F003A6AE3 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				1708FF0F24F950810054197A /* MapView.swift */,
+				1708FF1624F950820054197A /* MapViewController.swift */,
+				1708FF0A24F950810054197A /* MapWrapper.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		1768FF1524F9B489003A6AE3 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				1708FF1724F950820054197A /* ContentPicker.swift */,
+				1708FF1424F950820054197A /* ContentView.swift */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+		1768FF1624F9B4AC003A6AE3 /* CameraAR */ = {
+			isa = PBXGroup;
+			children = (
+				1708FF1524F950820054197A /* CameraARViewController.swift */,
+				1708FF1024F950810054197A /* CameraARWrapper.swift */,
+				1708FEFD24F950800054197A /* CameraARView.swift */,
+			);
+			path = CameraAR;
+			sourceTree = "<group>";
+		};
+		1768FF1724F9B4B7003A6AE3 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				1708FF0424F950800054197A /* DiscoverView.swift */,
+				1708FF0D24F950810054197A /* DiscoverWrapper.swift */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		1768FF1824F9B4C4003A6AE3 /* InitialScreen */ = {
+			isa = PBXGroup;
+			children = (
+				1708FF0724F950810054197A /* InitialScreen.swift */,
+			);
+			path = InitialScreen;
+			sourceTree = "<group>";
+		};
+		1768FF1924F9B4DD003A6AE3 /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				1708FF0024F950800054197A /* LineChartView.swift */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
+		B228DA37A9CF2C7D5153863A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F32C70B43A5091874E379FC0 /* Pods_MetrolensAR.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -85,15 +285,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1708FEFA24F94C790054197A /* Build configuration list for PBXNativeTarget "MetrolensAR" */;
 			buildPhases = (
+				2B8C10F7B560DDC3865777DB /* [CP] Check Pods Manifest.lock */,
 				1708FEDF24F94C750054197A /* Sources */,
 				1708FEE024F94C750054197A /* Frameworks */,
 				1708FEE124F94C750054197A /* Resources */,
+				C2A4BBE2741EB8878145FBA6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = MetrolensAR;
+			packageProductDependencies = (
+				1708FF3A24F958B10054197A /* SwiftUICharts */,
+			);
 			productName = MetrolensAR;
 			productReference = 1708FEE324F94C750054197A /* MetrolensAR.app */;
 			productType = "com.apple.product-type.application";
@@ -122,6 +327,9 @@
 				Base,
 			);
 			mainGroup = 1708FEDA24F94C750054197A;
+			packageReferences = (
+				1708FF3924F958B10054197A /* XCRemoteSwiftPackageReference "ChartView" */,
+			);
 			productRefGroup = 1708FEE424F94C750054197A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -144,15 +352,83 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2B8C10F7B560DDC3865777DB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MetrolensAR-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2A4BBE2741EB8878145FBA6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MetrolensAR/Pods-MetrolensAR-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MetrolensAR/Pods-MetrolensAR-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MetrolensAR/Pods-MetrolensAR-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1708FEDF24F94C750054197A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1708FF1B24F950820054197A /* CameraARView.swift in Sources */,
+				1708FF2024F950820054197A /* LikesView.swift in Sources */,
+				1708FF3024F950820054197A /* LocationPresentationPreview.swift in Sources */,
+				1708FF2224F950820054197A /* DiscoverView.swift in Sources */,
+				1708FF2D24F950820054197A /* MapView.swift in Sources */,
+				1708FF2E24F950820054197A /* CameraARWrapper.swift in Sources */,
+				1708FF2C24F950820054197A /* addFilter.swift in Sources */,
+				1708FF1C24F950820054197A /* BottomBar.swift in Sources */,
+				1708FF3624F950820054197A /* SmallAction.swift in Sources */,
+				1708FF2124F950820054197A /* BottomBarItem.swift in Sources */,
+				1708FF3D24F95BA70054197A /* CardPreview.swift in Sources */,
+				1708FF3324F950820054197A /* CameraARViewController.swift in Sources */,
 				1708FEEC24F94C750054197A /* MetrolensAR.xcdatamodeld in Sources */,
+				1708FF2724F950820054197A /* ARLocationPoint.swift in Sources */,
+				1708FF2B24F950820054197A /* DiscoverWrapper.swift in Sources */,
+				1708FF2F24F950820054197A /* NavigationLocation.swift in Sources */,
+				1708FF3224F950820054197A /* ContentView.swift in Sources */,
+				1708FF2A24F950820054197A /* BottomBarItemView.swift in Sources */,
+				1708FF1E24F950820054197A /* LineChartView.swift in Sources */,
+				1708FF3824F950820054197A /* BarBuilder.swift in Sources */,
+				1708FF2624F950820054197A /* Card.swift in Sources */,
+				1708FF2424F950820054197A /* LottieView.swift in Sources */,
+				1708FF3524F950820054197A /* ContentPicker.swift in Sources */,
 				1708FEE724F94C750054197A /* AppDelegate.swift in Sources */,
-				1708FEEE24F94C750054197A /* ContentView.swift in Sources */,
 				1708FEE924F94C750054197A /* SceneDelegate.swift in Sources */,
+				1708FF3124F950820054197A /* isHidden.swift in Sources */,
+				1708FF2524F950820054197A /* InitialScreen.swift in Sources */,
+				1708FF2824F950820054197A /* MapWrapper.swift in Sources */,
+				1708FF3424F950820054197A /* MapViewController.swift in Sources */,
+				1708FF1D24F950820054197A /* asImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +562,7 @@
 		};
 		1708FEFB24F94C790054197A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34DC646FE7D712E50B0ED491 /* Pods-MetrolensAR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -306,6 +583,7 @@
 		};
 		1708FEFC24F94C790054197A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02CEB1FC856D1862CD78660F /* Pods-MetrolensAR.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -346,6 +624,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1708FF3924F958B10054197A /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1708FF3A24F958B10054197A /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1708FF3924F958B10054197A /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		1708FEEA24F94C750054197A /* MetrolensAR.xcdatamodeld */ = {

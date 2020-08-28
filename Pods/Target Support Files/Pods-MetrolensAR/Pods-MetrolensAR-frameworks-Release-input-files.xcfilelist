@@ -1,0 +1,5 @@
+${PODS_ROOT}/Target Support Files/Pods-MetrolensAR/Pods-MetrolensAR-frameworks.sh
+${BUILT_PRODUCTS_DIR}/ARCL/ARCL.framework
+${BUILT_PRODUCTS_DIR}/ARCoreLocation/ARCoreLocation.framework
+${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework
+${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework
