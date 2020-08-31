@@ -34,6 +34,7 @@ class ARLocationPoint: UIView {
                                            y: informationContainer.frame.height / 2 - ulHeight / 2,
                                            width: 200,
                                            height: ulHeight))
+            ul.textColor = UIColor.black
             ul.text = "Palatul Parlamentului"
             return ul
         }()

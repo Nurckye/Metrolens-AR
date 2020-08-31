@@ -1,16 +1,27 @@
 import SwiftUI
 
-struct InitialScreen: View {
-    @State var play = 0
-    let img = UIImage(named: "applogo")!
+struct InitialScreen: View, CallbackResultHandler{
+    func onResultSuccess() {
+        self.loaded = true
+    }
+    
+    func onResultFailure() {
+        print("FAILLLLL")
+    }
+    
+    @State var loaded = false
     var body: some View {
-        VStack {
-            LottieView(name: "placeloader", play: $play)
-                .frame(width: 400, height: 400)
-            Image(uiImage: img)
-
-        }.padding(.horizontal)
-
+        if (!self.loaded) {
+            return AnyView(VStack {
+                Text("LOADING...")
+    //            LottieView(name: "placeloader", play: $play)
+    //                .frame(width: 400, height: 400)
+            }.padding(.horizontal).onAppear {
+                GraphQLService.fetchLocationList(callbackDelegate: self)
+            })
+        } else {
+            return AnyView(ContentView())
+        }
     }
 }
 

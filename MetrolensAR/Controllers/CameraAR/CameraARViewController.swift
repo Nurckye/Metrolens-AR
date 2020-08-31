@@ -38,7 +38,7 @@ class CameraARViewController: UIViewController, LNTouchDelegate {
         let location2 = CLLocation(coordinate: coordinate2, altitude: 10)
 
 
-        let coordinate3 = CLLocationCoordinate2D(latitude: 44.434916, longitude: 26.090246)
+        let coordinate3 = CLLocationCoordinate2D(latitude: 45.0551, longitude: 24.2209)
         let location3 = CLLocation(coordinate: coordinate3, altitude: 1)
 
         let uv1 = ARLocationPoint(frame: CGRect(x: 0, y: 0, width: 250, height: 100))

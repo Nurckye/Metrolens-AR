@@ -8,6 +8,7 @@ target 'MetrolensAR' do
   pod 'ARCL'
   pod 'SnapKit', '~> 5.0.0'
   pod 'lottie-ios'
+  pod "Apollo"
   # Pods for MetrolensAR
 
 end

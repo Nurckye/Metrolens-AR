@@ -18,11 +18,18 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         self.mapView = MKMapView(frame: CGRect(x: 0, y: 20, width: (self.window?.frame.width)!, height: (self.window?.frame.height)!))
         self.mapView?.isRotateEnabled = false
         self.mapView?.delegate = self
+        self.mapView?.showsUserLocation = true
     }
     
+    private func generatePins() {
+        for location in MemStorage.locations {
+            let annotation = MKPointAnnotation()
+            annotation.title = location.name
+            annotation.coordinate = location.coordinates
+            mapView?.addAnnotation(annotation)
+        }
+    }
     
-
- 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(true, animated: false)
@@ -35,7 +42,11 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             mapInstantiated = true
         }
         
+        self.generatePins()
         self.view.addSubview(self.mapView!)
+
+
+ 
         
    
 

@@ -199,12 +199,14 @@ fi
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/ARCL/ARCL.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/ARCoreLocation/ARCoreLocation.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Apollo/Apollo.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/ARCL/ARCL.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/ARCoreLocation/ARCoreLocation.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Apollo/Apollo.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework"
 fi

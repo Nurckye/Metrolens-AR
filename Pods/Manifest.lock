@@ -1,10 +1,14 @@
 PODS:
+  - Apollo (0.31.0):
+    - Apollo/Core (= 0.31.0)
+  - Apollo/Core (0.31.0)
   - ARCL (1.3.0)
   - ARCoreLocation (0.1.10)
   - lottie-ios (3.1.8)
   - SnapKit (5.0.1)
 
 DEPENDENCIES:
+  - Apollo
   - ARCL
   - ARCoreLocation (~> 0.1.10)
   - lottie-ios
@@ -12,17 +16,19 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Apollo
     - ARCL
     - ARCoreLocation
     - lottie-ios
     - SnapKit
 
 SPEC CHECKSUMS:
+  Apollo: 1b55f2c3970b83a6b49581896334a9c4311a838a
   ARCL: db48b6927d6f3f49f29568295ed91c94ab8d4aab
   ARCoreLocation: 882098e235b46438d5de66249dd67d4b5a9fd06b
   lottie-ios: 48fac6be217c76937e36e340e2d09cf7b10b7f5f
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 31483838cd02275d6ee59b3e5c900f551ec522a0
+PODFILE CHECKSUM: 7702f4db7668ca1943b15ebed9b6cd7c6ef6f957
 
 COCOAPODS: 1.9.3

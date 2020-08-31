@@ -41,6 +41,15 @@
 		1708FF3824F950820054197A /* BarBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708FF1A24F950820054197A /* BarBuilder.swift */; };
 		1708FF3B24F958B10054197A /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 1708FF3A24F958B10054197A /* SwiftUICharts */; };
 		1708FF3D24F95BA70054197A /* CardPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708FF3C24F95BA70054197A /* CardPreview.swift */; };
+		170D93E324FC5CD3005C63CA /* location.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 170D93E224FC5CD3005C63CA /* location.graphql */; };
+		170D93EA24FC64BD005C63CA /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170D93E924FC64BD005C63CA /* API.swift */; };
+		170D93ED24FC6E66005C63CA /* MemStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170D93EC24FC6E66005C63CA /* MemStorage.swift */; };
+		170D93EF24FC700F005C63CA /* LocationEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170D93EE24FC700F005C63CA /* LocationEntry.swift */; };
+		1762E69524FD8F30006962B0 /* parseCoordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1762E69424FD8F30006962B0 /* parseCoordinates.swift */; };
+		1762E69824FD92E2006962B0 /* CallbackResultHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1762E69724FD92E2006962B0 /* CallbackResultHandler.swift */; };
+		1762E69A24FD9955006962B0 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 1762E69924FD9955006962B0 /* schema.json */; };
+		1762E69C24FDAACA006962B0 /* slice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1762E69B24FDAACA006962B0 /* slice.swift */; };
+		17DC8A5A24FAB8E900630EFB /* GraphQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DC8A5924FAB8E900630EFB /* GraphQL.swift */; };
 		93330B6E2974FF9C0C96E4C0 /* Pods_MetrolensAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F32C70B43A5091874E379FC0 /* Pods_MetrolensAR.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +90,15 @@
 		1708FF1824F950820054197A /* SmallAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallAction.swift; sourceTree = "<group>"; };
 		1708FF1A24F950820054197A /* BarBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarBuilder.swift; sourceTree = "<group>"; };
 		1708FF3C24F95BA70054197A /* CardPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPreview.swift; sourceTree = "<group>"; };
+		170D93E224FC5CD3005C63CA /* location.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = location.graphql; sourceTree = "<group>"; };
+		170D93E924FC64BD005C63CA /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = MetrolensAR/API.swift; sourceTree = SOURCE_ROOT; };
+		170D93EC24FC6E66005C63CA /* MemStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemStorage.swift; sourceTree = "<group>"; };
+		170D93EE24FC700F005C63CA /* LocationEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationEntry.swift; sourceTree = "<group>"; };
+		1762E69424FD8F30006962B0 /* parseCoordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parseCoordinates.swift; sourceTree = "<group>"; };
+		1762E69724FD92E2006962B0 /* CallbackResultHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallbackResultHandler.swift; sourceTree = "<group>"; };
+		1762E69924FD9955006962B0 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = schema.json; path = MetrolensAR/schema.json; sourceTree = SOURCE_ROOT; };
+		1762E69B24FDAACA006962B0 /* slice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = slice.swift; sourceTree = "<group>"; };
+		17DC8A5924FAB8E900630EFB /* GraphQL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQL.swift; sourceTree = "<group>"; };
 		34DC646FE7D712E50B0ED491 /* Pods-MetrolensAR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetrolensAR.debug.xcconfig"; path = "Target Support Files/Pods-MetrolensAR/Pods-MetrolensAR.debug.xcconfig"; sourceTree = "<group>"; };
 		F32C70B43A5091874E379FC0 /* Pods_MetrolensAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MetrolensAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -128,6 +146,10 @@
 		1708FEE524F94C750054197A /* MetrolensAR */ = {
 			isa = PBXGroup;
 			children = (
+				1762E69624FD929B006962B0 /* Protocols */,
+				1762E69324FD8F1D006962B0 /* Utils */,
+				170D93EB24FC6E1D005C63CA /* MemStorage */,
+				17DC8A5824FAB8D500630EFB /* Services */,
 				1768FF1124F9B02C003A6AE3 /* Extensions */,
 				1768FF1024F9AFA8003A6AE3 /* Controllers */,
 				1768FF0F24F9AFA2003A6AE3 /* Views */,
@@ -151,11 +173,36 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		170D93EB24FC6E1D005C63CA /* MemStorage */ = {
+			isa = PBXGroup;
+			children = (
+				170D93EC24FC6E66005C63CA /* MemStorage.swift */,
+			);
+			path = MemStorage;
+			sourceTree = "<group>";
+		};
+		1762E69324FD8F1D006962B0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1762E69424FD8F30006962B0 /* parseCoordinates.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		1762E69624FD929B006962B0 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				1762E69724FD92E2006962B0 /* CallbackResultHandler.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		1768FF0E24F9AF9A003A6AE3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				1708FF1124F950820054197A /* NavigationLocation.swift */,
 				1708FF0824F950810054197A /* Card.swift */,
+				170D93EE24FC700F005C63CA /* LocationEntry.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -193,6 +240,7 @@
 				1708FF0E24F950810054197A /* addFilter.swift */,
 				1708FEFF24F950800054197A /* asImage.swift */,
 				1708FF1324F950820054197A /* isHidden.swift */,
+				1762E69B24FDAACA006962B0 /* slice.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -270,6 +318,17 @@
 			path = Charts;
 			sourceTree = "<group>";
 		};
+		17DC8A5824FAB8D500630EFB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				170D93E924FC64BD005C63CA /* API.swift */,
+				1762E69924FD9955006962B0 /* schema.json */,
+				17DC8A5924FAB8E900630EFB /* GraphQL.swift */,
+				170D93E224FC5CD3005C63CA /* location.graphql */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		B228DA37A9CF2C7D5153863A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -286,6 +345,7 @@
 			buildConfigurationList = 1708FEFA24F94C790054197A /* Build configuration list for PBXNativeTarget "MetrolensAR" */;
 			buildPhases = (
 				2B8C10F7B560DDC3865777DB /* [CP] Check Pods Manifest.lock */,
+				170D93E424FC5D39005C63CA /* Apollo CLI */,
 				1708FEDF24F94C750054197A /* Sources */,
 				1708FEE024F94C750054197A /* Frameworks */,
 				1708FEE124F94C750054197A /* Resources */,
@@ -329,6 +389,7 @@
 			mainGroup = 1708FEDA24F94C750054197A;
 			packageReferences = (
 				1708FF3924F958B10054197A /* XCRemoteSwiftPackageReference "ChartView" */,
+				170D93E524FC5DA9005C63CA /* XCRemoteSwiftPackageReference "apollo-ios" */,
 			);
 			productRefGroup = 1708FEE424F94C750054197A /* Products */;
 			projectDirPath = "";
@@ -344,6 +405,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				170D93E324FC5CD3005C63CA /* location.graphql in Resources */,
+				1762E69A24FD9955006962B0 /* schema.json in Resources */,
 				1708FEF624F94C790054197A /* LaunchScreen.storyboard in Resources */,
 				1708FEF324F94C790054197A /* Preview Assets.xcassets in Resources */,
 				1708FEF024F94C790054197A /* Assets.xcassets in Resources */,
@@ -353,6 +416,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		170D93E424FC5D39005C63CA /* Apollo CLI */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Apollo CLI";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "SCRIPT_PATH=\"${PODS_ROOT}/Apollo/scripts\"\ncd \"${SRCROOT}/${TARGET_NAME}\"\n#\"${SCRIPT_PATH}\"/run-bundled-codegen.sh schema:download --endpoint=http://localhost:8000/graphql schema.json\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"schema.json\" API.swift\n\n";
+		};
 		2B8C10F7B560DDC3865777DB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -414,11 +495,16 @@
 				1708FEEC24F94C750054197A /* MetrolensAR.xcdatamodeld in Sources */,
 				1708FF2724F950820054197A /* ARLocationPoint.swift in Sources */,
 				1708FF2B24F950820054197A /* DiscoverWrapper.swift in Sources */,
+				17DC8A5A24FAB8E900630EFB /* GraphQL.swift in Sources */,
 				1708FF2F24F950820054197A /* NavigationLocation.swift in Sources */,
 				1708FF3224F950820054197A /* ContentView.swift in Sources */,
 				1708FF2A24F950820054197A /* BottomBarItemView.swift in Sources */,
 				1708FF1E24F950820054197A /* LineChartView.swift in Sources */,
+				1762E69C24FDAACA006962B0 /* slice.swift in Sources */,
+				1762E69824FD92E2006962B0 /* CallbackResultHandler.swift in Sources */,
+				170D93ED24FC6E66005C63CA /* MemStorage.swift in Sources */,
 				1708FF3824F950820054197A /* BarBuilder.swift in Sources */,
+				170D93EF24FC700F005C63CA /* LocationEntry.swift in Sources */,
 				1708FF2624F950820054197A /* Card.swift in Sources */,
 				1708FF2424F950820054197A /* LottieView.swift in Sources */,
 				1708FF3524F950820054197A /* ContentPicker.swift in Sources */,
@@ -428,6 +514,8 @@
 				1708FF2524F950820054197A /* InitialScreen.swift in Sources */,
 				1708FF2824F950820054197A /* MapWrapper.swift in Sources */,
 				1708FF3424F950820054197A /* MapViewController.swift in Sources */,
+				170D93EA24FC64BD005C63CA /* API.swift in Sources */,
+				1762E69524FD8F30006962B0 /* parseCoordinates.swift in Sources */,
 				1708FF1D24F950820054197A /* asImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -496,7 +584,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -550,7 +638,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -632,6 +720,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.5.4;
+			};
+		};
+		170D93E524FC5DA9005C63CA /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.31.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

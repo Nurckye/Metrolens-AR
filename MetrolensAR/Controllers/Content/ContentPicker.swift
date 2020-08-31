@@ -8,7 +8,16 @@
 
 import SwiftUI
 
-struct ContentPicker: View {
+struct ContentPicker: View, CallbackResultHandler{
+    func onResultSuccess() {
+        print("YEY")
+    }
+    
+    func onResultFailure() {
+        print("NayNay")
+    }
+    
+ 
     var which: NavigationLocation
     
     var body: some View {
