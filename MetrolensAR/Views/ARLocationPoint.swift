@@ -12,7 +12,7 @@ import SnapKit
 class ARLocationPoint: UIView {
     private static let backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.70)
     
-    override init (frame : CGRect) {
+    init (frame : CGRect, name: String) {
         super.init(frame : frame)
         let divisionFactor: CGFloat = 50
         let paddingValue: CGFloat = 20
@@ -35,7 +35,8 @@ class ARLocationPoint: UIView {
                                            width: 200,
                                            height: ulHeight))
             ul.textColor = UIColor.black
-            ul.text = "Palatul Parlamentului"
+//            ul.text = "Palatul Parlamentului"
+            ul.text = name
             return ul
         }()
         informationContainer.addSubview(textLabel)
@@ -79,7 +80,7 @@ class ARLocationPoint: UIView {
     }
 
     convenience init () {
-        self.init(frame:CGRect.zero)
+        self.init(frame:CGRect.zero, name: "")
     }
 
     required init(coder aDecoder: NSCoder) {

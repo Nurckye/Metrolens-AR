@@ -1,6 +1,8 @@
 import SwiftUI
 
-struct InitialScreen: View, CallbackResultHandler{
+struct InitialScreen: View, CallbackResultHandler {
+    let locationServiceSingleton = LocationService.shared
+    
     func onResultSuccess() {
         self.loaded = true
     }

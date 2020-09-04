@@ -3,6 +3,8 @@ import ARCL
 import CoreLocation
 
 class CameraARViewController: UIViewController, LNTouchDelegate {
+    var sceneLocationView = SceneLocationView()
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
@@ -25,36 +27,26 @@ class CameraARViewController: UIViewController, LNTouchDelegate {
         print("LOC ToUCHED")
     }
     
-    var sceneLocationView = SceneLocationView()
+    func generateLocationPoints() {
+        var filteredEntries = filterCoordinatesInProximity(locations: MemStorage.locations)
+        for entry in filteredEntries {
+            let location = CLLocation(coordinate: entry.coordinates, altitude: 20)
+            let arPointView = ARLocationPoint(
+                frame: CGRect(x: 0, y: 0, width: 250, height: 100),
+                name: entry.name
+            )
+            let annotationNode = LocationAnnotationNode(location: location, view: arPointView)
+            sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: annotationNode)
+        }
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         sceneLocationView.run()
         view.addSubview(sceneLocationView)
-        let coordinate = CLLocationCoordinate2D(latitude: 44.4419, longitude: 26.00102)
-        let location = CLLocation(coordinate: coordinate, altitude: 20)
-
-        let coordinate2 = CLLocationCoordinate2D(latitude: 44.5419, longitude: 26.10102)
-        let location2 = CLLocation(coordinate: coordinate2, altitude: 10)
-
-
-        let coordinate3 = CLLocationCoordinate2D(latitude: 45.0551, longitude: 24.2209)
-        let location3 = CLLocation(coordinate: coordinate3, altitude: 1)
-
-        let uv1 = ARLocationPoint(frame: CGRect(x: 0, y: 0, width: 250, height: 100))
-        let uv2 = ARLocationPoint(frame: CGRect(x: 0, y: 0, width: 250, height: 100))
-        let uv3 = ARLocationPoint(frame: CGRect(x: 0, y: 0, width: 250, height: 100))
-
-
-        let annotationNode = LocationAnnotationNode(location: location, view: uv1)
-        sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: annotationNode)
-
-        let annotationNode2 = LocationAnnotationNode(location: location2, view: uv2)
-        sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: annotationNode2)
-
-        let annotationNode3 = LocationAnnotationNode(location: location3, view: uv3)
-        sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: annotationNode3)
         
+        self.generateLocationPoints()
         self.sceneLocationView.locationNodeTouchDelegate = self
     }
     
