@@ -30,17 +30,20 @@ class GraphQLService {
             }
             
             for rawEntry in location {
-                guard let entry = rawEntry else {
+                guard let entry = rawEntry, let featuredImage = URL(string: entry.featuredImage) else {
                     continue
                 }
+                
                 print(entry.coordinates)
+                
                 
                 let newEntry = LocationEntry(
                     id: entry.id,
                     name: entry.name,
                     coordinates: parseCoordinates(str: entry.coordinates),
-                    featuredImage: entry.featuredImage,
-                    firstBody: entry.firstBody
+                    featuredImage: featuredImage,
+                    firstBody: entry.firstBody,
+                    type: entry.type.rawValue
                 )
                 MemStorage.locations.append(newEntry)
             }

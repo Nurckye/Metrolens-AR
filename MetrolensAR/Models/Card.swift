@@ -8,10 +8,24 @@
 
 import Foundation
 
-struct Card : Identifiable {
-    var id : Int
-    var image : String
-    var title : String
-    var details : String
-    var expand : Bool
+struct Card: Identifiable {
+    var id: String
+    var image: URL
+    var title: String
+    var details: String
+    var type: String
+    var expand: Bool
+    
+    var isLiked: Bool {
+        get {
+            return LikesManager.manager.isLiked(id: self.id)
+        }
+        set (newValue) {
+            if newValue {
+                LikesManager.manager.addLike(id: self.id)
+            } else {
+                LikesManager.manager.removeLike(id : self.id)
+            }
+        }
+    }
 }

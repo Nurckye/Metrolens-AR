@@ -14,11 +14,11 @@ class SightSector<T> {
     
     func addValue<T>(degrees: Int, value: T) {
         if degrees < 0 || degrees > 360 { return }
-        self.degreesSightTrack[Int(degrees / step) * step] = value as? T {
-            set {
-
-            }
-        }
+//        self.degreesSightTrack[Int(degrees / step) * step] = value as? T {
+//            set {
+//
+//            }
+//        }
     }
     
     func getValues() -> Array<T> {

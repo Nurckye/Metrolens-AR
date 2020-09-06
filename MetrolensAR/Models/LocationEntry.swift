@@ -13,6 +13,7 @@ struct LocationEntry {
     let id: String
     let name: String
     let coordinates: CLLocationCoordinate2D
-    let featuredImage: String
+    let featuredImage: URL
     let firstBody: String
+    let type: String
 }

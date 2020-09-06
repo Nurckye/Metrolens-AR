@@ -1,16 +1,20 @@
 import SwiftUI
+import URLImage
 
 struct DiscoverView : View {
     @Binding var isChart: Bool
+
     
-    @State var data = [
-        Card(id: 0, image: "intercontinental", title: "USA", details: "The U.S. is a country of 50 states covering a vast swath of North America, with Alaska in the", expand: false),
-        Card(id: 1, image: "arhitecture", title: "Canada", details: "Canada is a country in the northern part of North America. Its ten provinces and three", expand: false),
-        Card(id: 2, image: "intercontinental", title: "Australia", details: "Australia, officially the Commonwealth of Australia, is a sovereign country comprising", expand: false),
-        Card(id: 3, image: "intercontinental", title: "Germany", details: "Germany is a Western European country with a landscape of forests, rivers, mountain ranges and North Sea beaches.", expand: false),
-        Card(id: 4, image: "intercontinental", title: "Dubai", details: "Dubai is a city and emirate in the United Arab Emirates known for luxury shopping, ultramodern architecture", expand: false),
-        Card(id: 5, image: "intercontinental", title: "London", details: "London, the capital of England and the United", expand: false)
-    ]
+    @State var data = MemStorage.locations.map { location in
+        return Card(
+            id: location.id,
+            image: location.featuredImage,
+            title: location.name,
+            details: location.firstBody,
+            type: location.type,
+            expand: false
+        )
+    }
     
     @State var hero = false
     var body: some View {
@@ -83,14 +87,15 @@ struct CardView: View {
             VStack {
                 ZStack {
                     VStack {
-                    Image(self.data.image)
-                        .resizable()
+                        URLImage(self.data.image) { proxy in
+                            proxy.image.resizable()
+                        }
                         .frame(height: self.data.expand ? 350 : 250)
                         
                         HStack {
                            VStack(alignment: .leading) {
-                               Text("Intercontinental").font(.headline)
-                               Text("General magheru 28").font(.subheadline).foregroundColor(Color.gray)
+                            Text(self.data.title).font(.headline)
+                            Text(self.data.type.capitalizingFirstLetter()).font(.subheadline).foregroundColor(Color.gray)
                            }
                            Spacer()
                            HStack {
@@ -102,11 +107,13 @@ struct CardView: View {
                 }
                 if self.data.expand {
                     HStack(spacing: 32) {
-                          SmallAction(action: {}, isPressed: false, icon: "location", title: "Locate")
-                         SmallAction(action: {
+                        SmallAction(action: {}, isPressed: false, icon: "location", title: "Locate")
+                        SmallAction(action: {
                             withAnimation { self.isChart = true }
-                         }, isPressed: false, icon: "chart.bar", title: "Stats")
-                         SmallAction(action: {}, isPressed: false, icon: "heart", title: "Like ")
+                        }, isPressed: false, icon: "chart.bar", title: "Stats")
+                        SmallAction(action: {
+                            self.data.isLiked = !self.data.isLiked
+                        }, isPressed: self.data.isLiked, icon: "heart", title: "Like ")
                     }.padding()
                     
                     Text(self.data.details).padding(.horizontal)
