@@ -21,7 +21,7 @@ struct MapWrapper: View {
                     Image(systemName: "camera").font(.system(size: 24))
                     Text("AR").font(.custom("AvenirNext-MediumBold", size: 18))
                     }
-            }.padding(20).background(Color(buttonBackground)).foregroundColor(.purple).cornerRadius(20)    .position(x: UIScreen.main.bounds.size.width - 60, y: UIScreen.main.bounds.size.height - 170).sheet(isPresented: $showingDetail) {
+            }.padding(20).background(Color(buttonBackground)).foregroundColor(.purple).cornerRadius(20)    .position(x: UIScreen.main.bounds.size.width - 60, y: UIScreen.main.bounds.size.height - 120).sheet(isPresented: $showingDetail) {
                 CameraARView()
             }
         }.edgesIgnoringSafeArea(.top)

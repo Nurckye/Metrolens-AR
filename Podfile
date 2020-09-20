@@ -10,6 +10,15 @@ target 'MetrolensAR' do
   pod 'lottie-ios'
   pod "Apollo"
   pod 'URLImage'
+  pod "Introspect"
+
+#  pod "FlexiblePageControl"
+#  pod 'CHIPageControl', '~> 0.1.3'
+#pod 'TKRubberPageControl'
+
+
+#  pod "PageControls"
+
   # Pods for MetrolensAR
 
 end

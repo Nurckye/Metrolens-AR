@@ -13,29 +13,11 @@ struct PlaceChartView: View {
     @Binding var isChart: Bool
     var body: some View {
         ScrollView(.vertical) {
-            ZStack {
-                VStack {
-                    HStack {
-                        Spacer()
-                        Button(action: {
-                            withAnimation {
-                                self.isChart = false
-                            }
-                        }) {
-                            Image(systemName: "xmark")
-                            .foregroundColor(.white)
-                            .padding()
-                            .background(Color.black.opacity(0.4))
-                            .clipShape(Circle())
-                        }
-                    }
-                    Spacer()
-                }
-                VStack {
-                    LineView(data: [8,23,54,32,12,37,7,23,43], title: "Line chart", legend: "Full screen").padding(.bottom, 400).padding()
-                  
-                    
-                }
+            VStack {
+                LineView(
+                    data: [8,23,54,32,12,37,7,23,43],
+                    title: "Line chart",
+                    legend: "Full screen").padding(.bottom, 400).padding()
             }
         }.padding(.leading).padding(.trailing)
     }

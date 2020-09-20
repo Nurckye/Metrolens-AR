@@ -1,0 +1,10 @@
+query LocationList($latitude: Float!, $longitude: Float!) {
+  locations(latitude: $latitude, longitude: $longitude) {
+    id
+    name
+    coordinates
+    featuredImage
+    firstBody
+    type
+  }
+}

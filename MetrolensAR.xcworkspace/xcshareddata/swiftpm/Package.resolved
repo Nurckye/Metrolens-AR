@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "ActivityIndicatorView",
+        "repositoryURL": "https://github.com/exyte/ActivityIndicatorView.git",
+        "state": {
+          "branch": null,
+          "revision": "2716d434d3d5e6392e10c452f3205a40e45fdec7",
+          "version": "0.0.4"
+        }
+      },
+      {
         "package": "Apollo",
         "repositoryURL": "https://github.com/apollographql/apollo-ios.git",
         "state": {
@@ -17,6 +26,24 @@
           "branch": null,
           "revision": "4699847a9ac0c694666cea3acef133498952566e",
           "version": "1.5.4"
+        }
+      },
+      {
+        "package": "Pages",
+        "repositoryURL": "https://github.com/nachonavarro/Pages",
+        "state": {
+          "branch": null,
+          "revision": "4cdbe4ff2f9ddbfda8cf0376a2acb678a1a0a0a2",
+          "version": "0.1.5"
+        }
+      },
+      {
+        "package": "PartialSheet",
+        "repositoryURL": "https://github.com/AndreaMiotto/PartialSheet.git",
+        "state": {
+          "branch": null,
+          "revision": "264f17a6dad41439df2fca4b03314ab5a39e7931",
+          "version": "2.1.10"
         }
       },
       {

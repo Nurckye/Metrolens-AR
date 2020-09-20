@@ -16,4 +16,14 @@ struct LocationEntry {
     let featuredImage: URL
     let firstBody: String
     let type: String
+    
+    var articleBodyImage: URL?
+    var lastBody: String?
+    var entryFee: Int?
+    var busyHours: Int?
+    
+    func isComplete() -> Bool {
+        return articleBodyImage != nil && lastBody != nil &&
+            entryFee != nil && busyHours != nil
+    }
 }

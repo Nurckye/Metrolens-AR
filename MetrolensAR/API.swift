@@ -59,12 +59,138 @@ public enum LocationModelType: RawRepresentable, Equatable, Hashable, CaseIterab
   }
 }
 
+public final class LocationByIdQuery: GraphQLQuery {
+  /// The raw GraphQL definition of this operation.
+  public let operationDefinition: String =
+    """
+    query LocationById($id: Int!) {
+      location(id: $id) {
+        __typename
+        articleBodyImage
+        lastBody
+        entryFee
+        busyHours
+      }
+    }
+    """
+
+  public let operationName: String = "LocationById"
+
+  public var id: Int
+
+  public init(id: Int) {
+    self.id = id
+  }
+
+  public var variables: GraphQLMap? {
+    return ["id": id]
+  }
+
+  public struct Data: GraphQLSelectionSet {
+    public static let possibleTypes: [String] = ["Query"]
+
+    public static var selections: [GraphQLSelection] {
+      return [
+        GraphQLField("location", arguments: ["id": GraphQLVariable("id")], type: .object(Location.selections)),
+      ]
+    }
+
+    public private(set) var resultMap: ResultMap
+
+    public init(unsafeResultMap: ResultMap) {
+      self.resultMap = unsafeResultMap
+    }
+
+    public init(location: Location? = nil) {
+      self.init(unsafeResultMap: ["__typename": "Query", "location": location.flatMap { (value: Location) -> ResultMap in value.resultMap }])
+    }
+
+    public var location: Location? {
+      get {
+        return (resultMap["location"] as? ResultMap).flatMap { Location(unsafeResultMap: $0) }
+      }
+      set {
+        resultMap.updateValue(newValue?.resultMap, forKey: "location")
+      }
+    }
+
+    public struct Location: GraphQLSelectionSet {
+      public static let possibleTypes: [String] = ["Location"]
+
+      public static var selections: [GraphQLSelection] {
+        return [
+          GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+          GraphQLField("articleBodyImage", type: .nonNull(.scalar(String.self))),
+          GraphQLField("lastBody", type: .nonNull(.scalar(String.self))),
+          GraphQLField("entryFee", type: .scalar(Int.self)),
+          GraphQLField("busyHours", type: .scalar(Int.self)),
+        ]
+      }
+
+      public private(set) var resultMap: ResultMap
+
+      public init(unsafeResultMap: ResultMap) {
+        self.resultMap = unsafeResultMap
+      }
+
+      public init(articleBodyImage: String, lastBody: String, entryFee: Int? = nil, busyHours: Int? = nil) {
+        self.init(unsafeResultMap: ["__typename": "Location", "articleBodyImage": articleBodyImage, "lastBody": lastBody, "entryFee": entryFee, "busyHours": busyHours])
+      }
+
+      public var __typename: String {
+        get {
+          return resultMap["__typename"]! as! String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "__typename")
+        }
+      }
+
+      public var articleBodyImage: String {
+        get {
+          return resultMap["articleBodyImage"]! as! String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "articleBodyImage")
+        }
+      }
+
+      public var lastBody: String {
+        get {
+          return resultMap["lastBody"]! as! String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "lastBody")
+        }
+      }
+
+      public var entryFee: Int? {
+        get {
+          return resultMap["entryFee"] as? Int
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "entryFee")
+        }
+      }
+
+      public var busyHours: Int? {
+        get {
+          return resultMap["busyHours"] as? Int
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "busyHours")
+        }
+      }
+    }
+  }
+}
+
 public final class LocationListQuery: GraphQLQuery {
   /// The raw GraphQL definition of this operation.
   public let operationDefinition: String =
     """
     query LocationList($latitude: Float!, $longitude: Float!) {
-      location(latitude: $latitude, longitude: $longitude) {
+      locations(latitude: $latitude, longitude: $longitude) {
         __typename
         id
         name
@@ -95,7 +221,7 @@ public final class LocationListQuery: GraphQLQuery {
 
     public static var selections: [GraphQLSelection] {
       return [
-        GraphQLField("location", arguments: ["latitude": GraphQLVariable("latitude"), "longitude": GraphQLVariable("longitude")], type: .list(.object(Location.selections))),
+        GraphQLField("locations", arguments: ["latitude": GraphQLVariable("latitude"), "longitude": GraphQLVariable("longitude")], type: .list(.object(Location.selections))),
       ]
     }
 
@@ -105,16 +231,16 @@ public final class LocationListQuery: GraphQLQuery {
       self.resultMap = unsafeResultMap
     }
 
-    public init(location: [Location?]? = nil) {
-      self.init(unsafeResultMap: ["__typename": "Query", "location": location.flatMap { (value: [Location?]) -> [ResultMap?] in value.map { (value: Location?) -> ResultMap? in value.flatMap { (value: Location) -> ResultMap in value.resultMap } } }])
+    public init(locations: [Location?]? = nil) {
+      self.init(unsafeResultMap: ["__typename": "Query", "locations": locations.flatMap { (value: [Location?]) -> [ResultMap?] in value.map { (value: Location?) -> ResultMap? in value.flatMap { (value: Location) -> ResultMap in value.resultMap } } }])
     }
 
-    public var location: [Location?]? {
+    public var locations: [Location?]? {
       get {
-        return (resultMap["location"] as? [ResultMap?]).flatMap { (value: [ResultMap?]) -> [Location?] in value.map { (value: ResultMap?) -> Location? in value.flatMap { (value: ResultMap) -> Location in Location(unsafeResultMap: value) } } }
+        return (resultMap["locations"] as? [ResultMap?]).flatMap { (value: [ResultMap?]) -> [Location?] in value.map { (value: ResultMap?) -> Location? in value.flatMap { (value: ResultMap) -> Location in Location(unsafeResultMap: value) } } }
       }
       set {
-        resultMap.updateValue(newValue.flatMap { (value: [Location?]) -> [ResultMap?] in value.map { (value: Location?) -> ResultMap? in value.flatMap { (value: Location) -> ResultMap in value.resultMap } } }, forKey: "location")
+        resultMap.updateValue(newValue.flatMap { (value: [Location?]) -> [ResultMap?] in value.map { (value: Location?) -> ResultMap? in value.flatMap { (value: Location) -> ResultMap in value.resultMap } } }, forKey: "locations")
       }
     }
 

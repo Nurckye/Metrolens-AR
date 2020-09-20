@@ -1,10 +1,8 @@
-query LocationList($latitude: Float!, $longitude: Float!) {
-  location(latitude: $latitude, longitude: $longitude) {
-    id
-    name
-    coordinates
-    featuredImage
-    firstBody
-    type
+query LocationById($id: Int!) {
+  location(id: $id) {
+    articleBodyImage
+    lastBody
+    entryFee
+    busyHours
   }
 }
