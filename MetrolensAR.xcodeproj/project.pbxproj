@@ -66,6 +66,7 @@
 		1795469E250302620033BB7F /* SightSector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1795469D250302620033BB7F /* SightSector.swift */; };
 		17AF29072516D42E009C5FD8 /* CustomPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AF29062516D42E009C5FD8 /* CustomPageControl.swift */; };
 		17DC8A5A24FAB8E900630EFB /* GraphQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DC8A5924FAB8E900630EFB /* GraphQL.swift */; };
+		17E5DF1825181630007E1DA3 /* StoriesModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E5DF1725181630007E1DA3 /* StoriesModal.swift */; };
 		17F7668C2517C68800FCD70C /* StoriesSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F7668B2517C68800FCD70C /* StoriesSmall.swift */; };
 		93330B6E2974FF9C0C96E4C0 /* Pods_MetrolensAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F32C70B43A5091874E379FC0 /* Pods_MetrolensAR.framework */; };
 /* End PBXBuildFile section */
@@ -129,6 +130,7 @@
 		1795469D250302620033BB7F /* SightSector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightSector.swift; sourceTree = "<group>"; };
 		17AF29062516D42E009C5FD8 /* CustomPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageControl.swift; sourceTree = "<group>"; };
 		17DC8A5924FAB8E900630EFB /* GraphQL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQL.swift; sourceTree = "<group>"; };
+		17E5DF1725181630007E1DA3 /* StoriesModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesModal.swift; sourceTree = "<group>"; };
 		17F7668B2517C68800FCD70C /* StoriesSmall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StoriesSmall.swift; path = MetrolensAR/Views/StoriesSmall.swift; sourceTree = SOURCE_ROOT; };
 		34DC646FE7D712E50B0ED491 /* Pods-MetrolensAR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetrolensAR.debug.xcconfig"; path = "Target Support Files/Pods-MetrolensAR/Pods-MetrolensAR.debug.xcconfig"; sourceTree = "<group>"; };
 		F32C70B43A5091874E379FC0 /* Pods_MetrolensAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MetrolensAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -283,6 +285,7 @@
 		1768FF0F24F9AFA2003A6AE3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1745C4E8250596390060D17B /* ContentFragment */,
 				1768FF1224F9B038003A6AE3 /* BottomBar */,
 				1708FF3C24F95BA70054197A /* CardPreview.swift */,
 				1708FF1224F950820054197A /* LocationPresentationPreview.swift */,
@@ -327,7 +330,6 @@
 		1768FF1224F9B038003A6AE3 /* BottomBar */ = {
 			isa = PBXGroup;
 			children = (
-				1745C4E8250596390060D17B /* ContentFragment */,
 				1708FF1A24F950820054197A /* BarBuilder.swift */,
 				1708FEFE24F950800054197A /* BottomBar.swift */,
 				1708FF0324F950800054197A /* BottomBarItem.swift */,
@@ -421,6 +423,7 @@
 			isa = PBXGroup;
 			children = (
 				17F7668B2517C68800FCD70C /* StoriesSmall.swift */,
+				17E5DF1725181630007E1DA3 /* StoriesModal.swift */,
 			);
 			path = Stories;
 			sourceTree = "<group>";
@@ -598,6 +601,7 @@
 				1708FF2124F950820054197A /* BottomBarItem.swift in Sources */,
 				1708FF3D24F95BA70054197A /* CardPreview.swift in Sources */,
 				1708FF3324F950820054197A /* CameraARViewController.swift in Sources */,
+				17E5DF1825181630007E1DA3 /* StoriesModal.swift in Sources */,
 				1708FEEC24F94C750054197A /* MetrolensAR.xcdatamodeld in Sources */,
 				1708FF2724F950820054197A /* ARLocationPoint.swift in Sources */,
 				1795469C2502FBAC0033BB7F /* getUserDistance.swift in Sources */,

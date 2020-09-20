@@ -50,7 +50,7 @@ struct DiscoverView : View {
                             .clipShape(Capsule())
                         }
                         .padding()
-                        StoriesSmall(data: data).padding(.bottom, 32).opacity(hero ? 0 : 1)
+                        StoriesSmall(data: data).padding(.bottom, 32).opacity(hero ? 0 : 1) 
                         VStack(spacing: 65) {
                             ForEach(0..<self.data.count) { i in
                                 

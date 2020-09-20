@@ -18,9 +18,10 @@ struct DiscoverWrapper: View {
                 isChart: $isChart,
                 data: $data,
                 title: "Discover"
-            ).sheet(isPresented: $isChart) {
-                PlaceChartView(isChart: self.$isChart)
-            }
+            )
+//            .sheet(isPresented: $isChart) {
+//                PlaceChartView(isChart: self.$isChart)
+//            }
         }
     }
 }
