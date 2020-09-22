@@ -7,7 +7,7 @@ struct LottieView: UIViewRepresentable {
     }
     
     var name: String!
-    @Binding var play:Int
+    @Binding var play: Int
     
     var animationView = AnimationView()
 

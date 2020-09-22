@@ -7,10 +7,21 @@
 //
 
 import SwiftUI
+import Combine
+import UIKit
 
 struct MapWrapper: View {
+    @Environment(\.colorScheme) var colorScheme
     @State var showingDetail = false
-    let buttonBackground = UIColor(red: 0.937, green: 0.863, blue: 0.973, alpha: 1)
+    let publisher = Just(1)
+
+    
+    let buttonBackgroundLight = UIColor(red: 0.937, green: 0.863, blue: 0.973, alpha: 1)
+    let buttonBackgroundDark = UIColor(red: 0.15, green: 0.07, blue: 0.19, alpha: 1.00)
+    static func computeButtonHeight() -> CGFloat {
+        return UIScreen.main.bounds.size.height - (UIDevice.current.hasNotch ? 180 : 120)
+    }
+    
     var body: some View {
         ZStack {
             MapView()
@@ -20,11 +31,19 @@ struct MapWrapper: View {
                 HStack(spacing: 12) {
                     Image(systemName: "camera").font(.system(size: 24))
                     Text("AR").font(.custom("AvenirNext-MediumBold", size: 18))
-                    }
-            }.padding(20).background(Color(buttonBackground)).foregroundColor(.purple).cornerRadius(20)    .position(x: UIScreen.main.bounds.size.width - 60, y: UIScreen.main.bounds.size.height - 120).sheet(isPresented: $showingDetail) {
-                CameraARView()
+                }
             }
-        }.edgesIgnoringSafeArea(.top)
+            .padding(24)
+            .background(Color(colorScheme == .dark ? buttonBackgroundDark : buttonBackgroundLight))
+            .foregroundColor(.purple)
+            .cornerRadius(20)
+            .position(
+                x: UIScreen.main.bounds.size.width - 72,
+                y: MapWrapper.computeButtonHeight())
+            .sheet(isPresented: $showingDetail) {
+                CameraARView()
+            } 
+        }
     }
 }
 

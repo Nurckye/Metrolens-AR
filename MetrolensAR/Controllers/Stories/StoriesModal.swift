@@ -19,30 +19,31 @@ struct StoriesModal: View {
     var body: some View {
     
         VStack {
-//            Pages(currentPage: $currentPage) {
-//                ForEach(0..<self.data.count) { i in
-//                    ZStack {
-//                        URLImage(self.data[i].image) { proxy in
-//                            proxy.image
-//                                .resizable()
-//                                .aspectRatio(contentMode: .fill)
-//                                .frame(maxWidth: .infinity, maxHeight: .infinity)
-//                        }
-//                    }
-//
-//                }
-//            }.frame(maxWidth: .infinity, maxHeight: .infinity)
             ModelPages(data, currentPage: $currentPage) { pageIndex, item in
-                URLImage(item.image) { proxy in
-                    proxy.image
-                        .resizable()
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                        .edgesIgnoringSafeArea(.all)
+                ZStack {
+                    URLImage(item.image) { proxy in
+                        proxy.image
+                            .resizable()
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            .edgesIgnoringSafeArea(.all)
+                    }
+                    VStack {
+                        Spacer()
+                        VStack {
+                            HStack {
+                                Text(item.title).font(Font.largeTitle.weight(.bold)).foregroundColor(Color.white)
+                                Spacer()
+                            }
+                            HStack {
+                                Text(item.type.capitalizingFirstLetter()).font(.headline).foregroundColor(Color.white)
+                                Spacer()
+                            }
+                        }
+                    }.padding().padding(.bottom, 30)
                 }
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-//        .background(Color.red)
         .edgesIgnoringSafeArea(.all)
         .onTapGesture {
               presentationMode.wrappedValue.dismiss()

@@ -11,6 +11,7 @@ target 'MetrolensAR' do
   pod "Apollo"
   pod 'URLImage'
   pod "Introspect"
+#  pod 'ExytePopupView'
 
 #  pod "FlexiblePageControl"
 #  pod 'CHIPageControl', '~> 0.1.3'

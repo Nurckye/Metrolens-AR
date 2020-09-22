@@ -65,6 +65,12 @@
 		1795469C2502FBAC0033BB7F /* getUserDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1795469B2502FBAC0033BB7F /* getUserDistance.swift */; };
 		1795469E250302620033BB7F /* SightSector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1795469D250302620033BB7F /* SightSector.swift */; };
 		17AF29072516D42E009C5FD8 /* CustomPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AF29062516D42E009C5FD8 /* CustomPageControl.swift */; };
+		17B5BD9B2518E5BC00A2B687 /* hasNotch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B5BD9A2518E5BC00A2B687 /* hasNotch.swift */; };
+		17C782DE2519F6A4008C2602 /* loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 17C782DD2519F6A4008C2602 /* loader.json */; };
+		17C782EA251A0360008C2602 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C782E9251A0360008C2602 /* PopupView.swift */; };
+		17C782ED251A0445008C2602 /* AlertNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C782EC251A0445008C2602 /* AlertNotification.swift */; };
+		17C782F1251A7A9C008C2602 /* StateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C782F0251A7A9C008C2602 /* StateManager.swift */; };
+		17C782F4251A7BFF008C2602 /* PresentationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C782F3251A7BFF008C2602 /* PresentationInfo.swift */; };
 		17DC8A5A24FAB8E900630EFB /* GraphQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DC8A5924FAB8E900630EFB /* GraphQL.swift */; };
 		17E5DF1825181630007E1DA3 /* StoriesModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E5DF1725181630007E1DA3 /* StoriesModal.swift */; };
 		17F7668C2517C68800FCD70C /* StoriesSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F7668B2517C68800FCD70C /* StoriesSmall.swift */; };
@@ -129,6 +135,12 @@
 		1795469B2502FBAC0033BB7F /* getUserDistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getUserDistance.swift; sourceTree = "<group>"; };
 		1795469D250302620033BB7F /* SightSector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightSector.swift; sourceTree = "<group>"; };
 		17AF29062516D42E009C5FD8 /* CustomPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageControl.swift; sourceTree = "<group>"; };
+		17B5BD9A2518E5BC00A2B687 /* hasNotch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hasNotch.swift; sourceTree = "<group>"; };
+		17C782DD2519F6A4008C2602 /* loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader.json; sourceTree = "<group>"; };
+		17C782E9251A0360008C2602 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
+		17C782EC251A0445008C2602 /* AlertNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertNotification.swift; sourceTree = "<group>"; };
+		17C782F0251A7A9C008C2602 /* StateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StateManager.swift; path = MetrolensAR/Controllers/InitialScreen/StateManager.swift; sourceTree = SOURCE_ROOT; };
+		17C782F3251A7BFF008C2602 /* PresentationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationInfo.swift; sourceTree = "<group>"; };
 		17DC8A5924FAB8E900630EFB /* GraphQL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQL.swift; sourceTree = "<group>"; };
 		17E5DF1725181630007E1DA3 /* StoriesModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesModal.swift; sourceTree = "<group>"; };
 		17F7668B2517C68800FCD70C /* StoriesSmall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StoriesSmall.swift; path = MetrolensAR/Views/StoriesSmall.swift; sourceTree = SOURCE_ROOT; };
@@ -182,6 +194,7 @@
 		1708FEE524F94C750054197A /* MetrolensAR */ = {
 			isa = PBXGroup;
 			children = (
+				17C782DC2519F679008C2602 /* Animations */,
 				1762E69624FD929B006962B0 /* Protocols */,
 				1762E69324FD8F1D006962B0 /* Utils */,
 				17DC8A5824FAB8D500630EFB /* Services */,
@@ -278,6 +291,7 @@
 				1708FF1124F950820054197A /* NavigationLocation.swift */,
 				1708FF0824F950810054197A /* Card.swift */,
 				170D93EE24FC700F005C63CA /* LocationEntry.swift */,
+				17C782F3251A7BFF008C2602 /* PresentationInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -295,6 +309,7 @@
 				1745C4E0250575450060D17B /* LoadingImageView.swift */,
 				17686A032516888D00D1BE43 /* ImageWithCaption.swift */,
 				17AF29062516D42E009C5FD8 /* CustomPageControl.swift */,
+				17C782E9251A0360008C2602 /* PopupView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -323,6 +338,7 @@
 				1708FF1324F950820054197A /* isHidden.swift */,
 				1762E69B24FDAACA006962B0 /* slice.swift */,
 				1745C4E6250594F50060D17B /* capitalizingFirstLetter.swift */,
+				17B5BD9A2518E5BC00A2B687 /* hasNotch.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -388,6 +404,7 @@
 			isa = PBXGroup;
 			children = (
 				1708FF0724F950810054197A /* InitialScreen.swift */,
+				17C782EC251A0445008C2602 /* AlertNotification.swift */,
 			);
 			path = InitialScreen;
 			sourceTree = "<group>";
@@ -408,9 +425,26 @@
 			path = LocationService;
 			sourceTree = "<group>";
 		};
+		17C782DC2519F679008C2602 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				17C782DD2519F6A4008C2602 /* loader.json */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		17C782EF251A7A88008C2602 /* StateManager */ = {
+			isa = PBXGroup;
+			children = (
+				17C782F0251A7A9C008C2602 /* StateManager.swift */,
+			);
+			path = StateManager;
+			sourceTree = "<group>";
+		};
 		17DC8A5824FAB8D500630EFB /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				17C782EF251A7A88008C2602 /* StateManager */,
 				170D93EB24FC6E1D005C63CA /* MemStorage */,
 				1745C4E3250584E50060D17B /* LikesManager */,
 				1745C4E2250584D10060D17B /* GraphQLService */,
@@ -513,6 +547,7 @@
 				170D93E324FC5CD3005C63CA /* locations.graphql in Resources */,
 				1708FEF624F94C790054197A /* LaunchScreen.storyboard in Resources */,
 				1708FEF324F94C790054197A /* Preview Assets.xcassets in Resources */,
+				17C782DE2519F6A4008C2602 /* loader.json in Resources */,
 				176869F22516159B00D1BE43 /* location.graphql in Resources */,
 				176869F925161E3100D1BE43 /* schema.json in Resources */,
 				1708FEF024F94C790054197A /* Assets.xcassets in Resources */,
@@ -593,6 +628,7 @@
 				1708FF2224F950820054197A /* DiscoverView.swift in Sources */,
 				1708FF2D24F950820054197A /* MapView.swift in Sources */,
 				1708FF2E24F950820054197A /* CameraARWrapper.swift in Sources */,
+				17C782EA251A0360008C2602 /* PopupView.swift in Sources */,
 				179546952502EB470033BB7F /* LocationService.swift in Sources */,
 				1708FF2C24F950820054197A /* addFilter.swift in Sources */,
 				1745C4E1250575450060D17B /* LoadingImageView.swift in Sources */,
@@ -606,11 +642,13 @@
 				1708FF2724F950820054197A /* ARLocationPoint.swift in Sources */,
 				1795469C2502FBAC0033BB7F /* getUserDistance.swift in Sources */,
 				1708FF2B24F950820054197A /* DiscoverWrapper.swift in Sources */,
+				17C782F4251A7BFF008C2602 /* PresentationInfo.swift in Sources */,
 				17F7668C2517C68800FCD70C /* StoriesSmall.swift in Sources */,
 				17DC8A5A24FAB8E900630EFB /* GraphQL.swift in Sources */,
 				1708FF2F24F950820054197A /* NavigationLocation.swift in Sources */,
 				1708FF3224F950820054197A /* ContentView.swift in Sources */,
 				1708FF2A24F950820054197A /* BottomBarItemView.swift in Sources */,
+				17B5BD9B2518E5BC00A2B687 /* hasNotch.swift in Sources */,
 				1708FF1E24F950820054197A /* LineChartView.swift in Sources */,
 				1762E69C24FDAACA006962B0 /* slice.swift in Sources */,
 				1762E69824FD92E2006962B0 /* CallbackResultHandler.swift in Sources */,
@@ -619,6 +657,7 @@
 				170D93EF24FC700F005C63CA /* LocationEntry.swift in Sources */,
 				1795469A2502FAB90033BB7F /* filterCoordinatesInProximity.swift in Sources */,
 				1708FF2624F950820054197A /* Card.swift in Sources */,
+				17C782ED251A0445008C2602 /* AlertNotification.swift in Sources */,
 				170FF06C250D4FA70088739F /* dateUtils.swift in Sources */,
 				1708FF2424F950820054197A /* LottieView.swift in Sources */,
 				1708FF3524F950820054197A /* ContentPicker.swift in Sources */,
@@ -631,6 +670,7 @@
 				1795469E250302620033BB7F /* SightSector.swift in Sources */,
 				1745C4EA250596540060D17B /* ContentFragment.swift in Sources */,
 				1708FF2524F950820054197A /* InitialScreen.swift in Sources */,
+				17C782F1251A7A9C008C2602 /* StateManager.swift in Sources */,
 				1708FF2824F950820054197A /* MapWrapper.swift in Sources */,
 				1708FF3424F950820054197A /* MapViewController.swift in Sources */,
 				1762E69524FD8F30006962B0 /* parseCoordinates.swift in Sources */,

@@ -22,10 +22,16 @@ struct ContentPicker: View, CallbackResultHandler{
     
     var body: some View {
         ZStack {
-            MapWrapper().edgesIgnoringSafeArea(.top) .navigationBarTitle("").navigationBarHidden(true).isHidden(which != NavigationLocation.Map)
+            MapWrapper().isHidden(which != NavigationLocation.Map)
+                .navigationBarTitle("")
+                .navigationBarHidden(true)
+                .edgesIgnoringSafeArea(.top)
+            
             DiscoverWrapper().isHidden(which != NavigationLocation.Discover)
+            
             LikesView().isHidden(which != NavigationLocation.Likes)
         }
+     
     }
 }
 

@@ -9,6 +9,7 @@ let items: [BottomBarItem] = [
 
 
 struct ContentView : View {
+    @Environment(\.colorScheme) var colorScheme
     @State private var selectedIndex: Int = 0
 
     var selectedItem: BottomBarItem {
@@ -21,13 +22,13 @@ struct ContentView : View {
                 VStack {
                     ContentPicker(which: NavigationLocation(rawValue: selectedItem.title) ?? NavigationLocation.Map)
                     
-                    BottomBar(selectedIndex: $selectedIndex, items: items).background(Color.white)
+                    BottomBar(selectedIndex: $selectedIndex, items: items)
                 }
                 GeometryReader {  geometry in
                     VStack {
-                        Spacer()
+                        Spacer().frame(maxHeight: .infinity)
                         Rectangle()
-                        .fill(Color.white)
+                            .fill(colorScheme == .dark ? Color.black : Color.white)
                         .frame(height: geometry.safeAreaInsets.bottom)
                     }.edgesIgnoringSafeArea(.bottom)
                 }
