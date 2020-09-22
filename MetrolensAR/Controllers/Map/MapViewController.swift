@@ -1,6 +1,7 @@
 import UIKit
 import MapKit
 import SwiftUI
+import Combine
 import Foundation
 
 class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
@@ -57,32 +58,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
 }
    
-
-        
-//        for annotation in MapUtils.generateCountiesCoordinates() {
-//            mapView?.addAnnotation(annotation)
-//        }
-        
-//        let coordinate = CLLocationCoordinate2D(latitude: 45.397, longitude: 24.9632)
-//        let region = self.mapView?.regionThatFits(MKCoordinateRegion(center: coordinate, latitudinalMeters: 1450000, longitudinalMeters: 145000))
-//        self.mapView?.setRegion(region!, animated: true)
-
-
-
-//extension MapViewController: CLLocationManagerDelegate {
-//     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-//        let location = locations.last! as CLLocation
-//        let currentLocation = location.coordinate
-//        let coordinateRegion = MKCoordinateRegion(center: currentLocation, latitudinalMeters: 800, longitudinalMeters: 800)
-//        mapView.setRegion(coordinateRegion, animated: true)
-//        locationManager.stopUpdatingLocation()
-//     }
-//
-//     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-//        print(error.localizedDescription)
-//     }
-//}
-
 struct MapViewController_Previews: PreviewProvider {
     static var previews: some View {
         /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/

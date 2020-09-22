@@ -71,6 +71,8 @@
 		17C782ED251A0445008C2602 /* AlertNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C782EC251A0445008C2602 /* AlertNotification.swift */; };
 		17C782F1251A7A9C008C2602 /* StateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C782F0251A7A9C008C2602 /* StateManager.swift */; };
 		17C782F4251A7BFF008C2602 /* PresentationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C782F3251A7BFF008C2602 /* PresentationInfo.swift */; };
+		17C782F8251AA5BE008C2602 /* StateEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C782F7251AA5BE008C2602 /* StateEntry.swift */; };
+		17C782FC251AAA3D008C2602 /* Subscribable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C782FB251AAA3D008C2602 /* Subscribable.swift */; };
 		17DC8A5A24FAB8E900630EFB /* GraphQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DC8A5924FAB8E900630EFB /* GraphQL.swift */; };
 		17E5DF1825181630007E1DA3 /* StoriesModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E5DF1725181630007E1DA3 /* StoriesModal.swift */; };
 		17F7668C2517C68800FCD70C /* StoriesSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F7668B2517C68800FCD70C /* StoriesSmall.swift */; };
@@ -141,6 +143,8 @@
 		17C782EC251A0445008C2602 /* AlertNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertNotification.swift; sourceTree = "<group>"; };
 		17C782F0251A7A9C008C2602 /* StateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StateManager.swift; path = MetrolensAR/Controllers/InitialScreen/StateManager.swift; sourceTree = SOURCE_ROOT; };
 		17C782F3251A7BFF008C2602 /* PresentationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationInfo.swift; sourceTree = "<group>"; };
+		17C782F7251AA5BE008C2602 /* StateEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateEntry.swift; sourceTree = "<group>"; };
+		17C782FB251AAA3D008C2602 /* Subscribable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscribable.swift; sourceTree = "<group>"; };
 		17DC8A5924FAB8E900630EFB /* GraphQL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQL.swift; sourceTree = "<group>"; };
 		17E5DF1725181630007E1DA3 /* StoriesModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesModal.swift; sourceTree = "<group>"; };
 		17F7668B2517C68800FCD70C /* StoriesSmall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StoriesSmall.swift; path = MetrolensAR/Views/StoriesSmall.swift; sourceTree = SOURCE_ROOT; };
@@ -273,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				1762E69724FD92E2006962B0 /* CallbackResultHandler.swift */,
+				17C782FB251AAA3D008C2602 /* Subscribable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -437,6 +442,7 @@
 			isa = PBXGroup;
 			children = (
 				17C782F0251A7A9C008C2602 /* StateManager.swift */,
+				17C782F7251AA5BE008C2602 /* StateEntry.swift */,
 			);
 			path = StateManager;
 			sourceTree = "<group>";
@@ -644,6 +650,7 @@
 				1708FF2B24F950820054197A /* DiscoverWrapper.swift in Sources */,
 				17C782F4251A7BFF008C2602 /* PresentationInfo.swift in Sources */,
 				17F7668C2517C68800FCD70C /* StoriesSmall.swift in Sources */,
+				17C782F8251AA5BE008C2602 /* StateEntry.swift in Sources */,
 				17DC8A5A24FAB8E900630EFB /* GraphQL.swift in Sources */,
 				1708FF2F24F950820054197A /* NavigationLocation.swift in Sources */,
 				1708FF3224F950820054197A /* ContentView.swift in Sources */,
@@ -652,6 +659,7 @@
 				1708FF1E24F950820054197A /* LineChartView.swift in Sources */,
 				1762E69C24FDAACA006962B0 /* slice.swift in Sources */,
 				1762E69824FD92E2006962B0 /* CallbackResultHandler.swift in Sources */,
+				17C782FC251AAA3D008C2602 /* Subscribable.swift in Sources */,
 				170D93ED24FC6E66005C63CA /* MemStorage.swift in Sources */,
 				1708FF3824F950820054197A /* BarBuilder.swift in Sources */,
 				170D93EF24FC700F005C63CA /* LocationEntry.swift in Sources */,
