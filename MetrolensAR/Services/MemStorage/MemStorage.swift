@@ -10,4 +10,20 @@ import MapKit
 class MemStorage {
     static var locations = Array<LocationEntry>()
     static var currentUserLocation: CLLocationCoordinate2D? = nil
+    
+    
+    static func getLocationById(id: String) -> LocationEntry {
+        var curr: LocationEntry = locations[0]
+        for location in locations {
+            if location.id == id {
+                print(location)
+                print(location)
+                print(location)
+                print(location)
+                curr = location
+//                return location
+            }
+        }
+        return curr
+    }
 }

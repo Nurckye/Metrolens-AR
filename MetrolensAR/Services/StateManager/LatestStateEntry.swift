@@ -1,5 +1,5 @@
 //
-//  LocationEntryState.swift
+//  PersistentStateEntry.swift
 //  MetrolensAR
 //
 //  Created by Radu Nitescu  on 23/09/2020.
@@ -9,12 +9,12 @@
 import Foundation
 import Combine
 
-class StateEntry<T>: Subscribable {
+class LatestStateEntry<T>: Subscribable {
     private var subscribers: [AnyCancellable]?
-    private let passThroughSubject = PassthroughSubject<T, Never>()
+    private let currentValueSubject = CurrentValueSubject<T?, Never>(nil)
 
-    func subscribe(callback: @escaping (T) -> Void) -> AnyCancellable {
-        let subscriber = passThroughSubject.sink(receiveValue: { value in
+    func subscribe(callback: @escaping (T?) -> Void) -> AnyCancellable {
+        let subscriber = currentValueSubject.sink(receiveValue: { value in
             callback(value)
         })
         subscribers?.append(subscriber)
@@ -22,7 +22,7 @@ class StateEntry<T>: Subscribable {
     }
     
     func publish(data: T) {
-        passThroughSubject.send(data)
+        currentValueSubject.send(data)
     }
 }
 

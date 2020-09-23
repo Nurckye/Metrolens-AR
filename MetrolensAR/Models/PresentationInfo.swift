@@ -11,5 +11,5 @@ import Foundation
 struct PresentationInfo {
     var isCamera: Bool
     var isPresented: Bool
-    var locationIndex: Int?
+    var locationId: String?
 }

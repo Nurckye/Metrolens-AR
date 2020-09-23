@@ -30,7 +30,7 @@ class CameraARViewController: UIViewController, LNTouchDelegate {
     func generateLocationPoints() {
         var filteredEntries = filterCoordinatesInProximity(locations: MemStorage.locations)
         for entry in filteredEntries {
-            let location = CLLocation(coordinate: entry.coordinates, altitude: 20)
+            let location = CLLocation(coordinate: entry.coordinates, altitude: 212)
             let arPointView = ARLocationPoint(
                 frame: CGRect(x: 0, y: 0, width: 250, height: 100),
                 name: entry.name

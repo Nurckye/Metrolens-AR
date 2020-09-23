@@ -15,6 +15,12 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         let generator = UIImpactFeedbackGenerator(style: .light)
         generator.impactOccurred()
+        let selectedAnnotation = view.annotation as? LocationPointAnnotation
+        let payload = PresentationInfo(
+            isCamera: false,
+            isPresented: true,
+            locationId: selectedAnnotation?.id)
+        StateManager.manager.publish(key: LOCATION_SELECTED_EVENT, payload: payload)
     }
     
     func setMapProps() {
@@ -28,8 +34,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
    
     private func generatePins() {
         for location in MemStorage.locations {
-            let annotation = MKPointAnnotation()
+            let annotation = LocationPointAnnotation()
             annotation.title = location.name
+            annotation.id = location.id
             annotation.coordinate = location.coordinates
             mapView?.addAnnotation(annotation)
         }

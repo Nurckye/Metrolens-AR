@@ -68,7 +68,6 @@ struct DiscoverView : View {
                                         }
                                     }
                                     .frame(height: self.data[i].expand ? UIScreen.main.bounds.height : 300)
-                                
                             }
                         }
                     }
@@ -130,11 +129,9 @@ struct CardView: View {
             // butonul cu x facut de mine
             if self.data.expand {
                 Button(action: {
-                    withAnimation(.interactiveSpring(response: 0.5, dampingFraction: 0.8, blendDuration: 0)){
-                        
+                    withAnimation(.interactiveSpring(response: 0.5, dampingFraction: 0.8, blendDuration: 0)) {
                         self.data.expand.toggle()
                         self.hero.toggle()
-
                     }
                 }) {
                     Image(systemName: "xmark")
