@@ -20,13 +20,11 @@ struct SheetView: View {
     var body: some View {
         return VStack {
             if self.isCamera {
-                CameraARView()
-//                Text("SALLLUT")
-                
+                CameraARView()                
             } else {
-                ModalSheetScreen(data: $data)
+                ModalSheetScreen(data: $data, isLiked: data.isLiked)
                     .transition(.asymmetric(
-                                    insertion: AnyTransition.move(edge: .leading),
+                                    insertion: AnyTransition.move(edge: .trailing),
                                     removal: AnyTransition.move(edge: .trailing))
                     )
                     .animation(.easeIn)

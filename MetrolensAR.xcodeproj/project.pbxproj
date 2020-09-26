@@ -16,7 +16,7 @@
 		1708FF1B24F950820054197A /* CameraARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708FEFD24F950800054197A /* CameraARView.swift */; };
 		1708FF1C24F950820054197A /* BottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708FEFE24F950800054197A /* BottomBar.swift */; };
 		1708FF1D24F950820054197A /* asImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708FEFF24F950800054197A /* asImage.swift */; };
-		1708FF1E24F950820054197A /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708FF0024F950800054197A /* LineChartView.swift */; };
+		1708FF1E24F950820054197A /* PlaceChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708FF0024F950800054197A /* PlaceChartView.swift */; };
 		1708FF2024F950820054197A /* LikesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708FF0224F950800054197A /* LikesView.swift */; };
 		1708FF2124F950820054197A /* BottomBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708FF0324F950800054197A /* BottomBarItem.swift */; };
 		1708FF2224F950820054197A /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708FF0424F950800054197A /* DiscoverView.swift */; };
@@ -54,6 +54,7 @@
 		1762E69524FD8F30006962B0 /* parseCoordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1762E69424FD8F30006962B0 /* parseCoordinates.swift */; };
 		1762E69824FD92E2006962B0 /* CallbackResultHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1762E69724FD92E2006962B0 /* CallbackResultHandler.swift */; };
 		1762E69C24FDAACA006962B0 /* slice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1762E69B24FDAACA006962B0 /* slice.swift */; };
+		17664E4D251F626D00C05E5A /* chartUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17664E4C251F626D00C05E5A /* chartUtils.swift */; };
 		176869EA25160E1100D1BE43 /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176869E925160E1100D1BE43 /* Details.swift */; };
 		176869EF251613FD00D1BE43 /* ActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 176869EE251613FD00D1BE43 /* ActivityIndicatorView */; };
 		176869F22516159B00D1BE43 /* location.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 176869F12516159B00D1BE43 /* location.graphql */; };
@@ -97,7 +98,7 @@
 		1708FEFD24F950800054197A /* CameraARView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraARView.swift; sourceTree = "<group>"; };
 		1708FEFE24F950800054197A /* BottomBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomBar.swift; sourceTree = "<group>"; };
 		1708FEFF24F950800054197A /* asImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = asImage.swift; sourceTree = "<group>"; };
-		1708FF0024F950800054197A /* LineChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
+		1708FF0024F950800054197A /* PlaceChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceChartView.swift; sourceTree = "<group>"; };
 		1708FF0224F950800054197A /* LikesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikesView.swift; sourceTree = "<group>"; };
 		1708FF0324F950800054197A /* BottomBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomBarItem.swift; sourceTree = "<group>"; };
 		1708FF0424F950800054197A /* DiscoverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
@@ -133,6 +134,7 @@
 		1762E69424FD8F30006962B0 /* parseCoordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parseCoordinates.swift; sourceTree = "<group>"; };
 		1762E69724FD92E2006962B0 /* CallbackResultHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallbackResultHandler.swift; sourceTree = "<group>"; };
 		1762E69B24FDAACA006962B0 /* slice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = slice.swift; sourceTree = "<group>"; };
+		17664E4C251F626D00C05E5A /* chartUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chartUtils.swift; sourceTree = "<group>"; };
 		176869E925160E1100D1BE43 /* Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details.swift; sourceTree = "<group>"; };
 		176869F12516159B00D1BE43 /* location.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = location.graphql; sourceTree = "<group>"; };
 		176869F825161E3100D1BE43 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 				1795469B2502FBAC0033BB7F /* getUserDistance.swift */,
 				1795469D250302620033BB7F /* SightSector.swift */,
 				170FF06B250D4FA70088739F /* dateUtils.swift */,
+				17664E4C251F626D00C05E5A /* chartUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -430,7 +433,7 @@
 		1768FF1924F9B4DD003A6AE3 /* Charts */ = {
 			isa = PBXGroup;
 			children = (
-				1708FF0024F950800054197A /* LineChartView.swift */,
+				1708FF0024F950800054197A /* PlaceChartView.swift */,
 			);
 			path = Charts;
 			sourceTree = "<group>";
@@ -674,6 +677,7 @@
 				1708FF2D24F950820054197A /* MapView.swift in Sources */,
 				1708FF2E24F950820054197A /* CameraARWrapper.swift in Sources */,
 				17C782EA251A0360008C2602 /* PopupView.swift in Sources */,
+				17664E4D251F626D00C05E5A /* chartUtils.swift in Sources */,
 				179546952502EB470033BB7F /* LocationService.swift in Sources */,
 				1708FF2C24F950820054197A /* addFilter.swift in Sources */,
 				17B07151251BA0F0002A9B24 /* LocationPointAnnotation.swift in Sources */,
@@ -697,7 +701,7 @@
 				1708FF3224F950820054197A /* ContentView.swift in Sources */,
 				1708FF2A24F950820054197A /* BottomBarItemView.swift in Sources */,
 				17B5BD9B2518E5BC00A2B687 /* hasNotch.swift in Sources */,
-				1708FF1E24F950820054197A /* LineChartView.swift in Sources */,
+				1708FF1E24F950820054197A /* PlaceChartView.swift in Sources */,
 				1762E69C24FDAACA006962B0 /* slice.swift in Sources */,
 				1762E69824FD92E2006962B0 /* CallbackResultHandler.swift in Sources */,
 				17C782FC251AAA3D008C2602 /* Subscribable.swift in Sources */,

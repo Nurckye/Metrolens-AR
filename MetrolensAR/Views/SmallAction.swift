@@ -32,7 +32,9 @@ struct SmallAction: View {
                 RoundedRectangle(cornerRadius: 20)
                 .stroke(lineWidth: 1)
             )
-        }.foregroundColor(generalColor)
+        }
+        .foregroundColor(generalColor)
+        .frame(maxWidth: 80)
     }
 }
 

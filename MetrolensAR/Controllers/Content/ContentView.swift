@@ -30,7 +30,8 @@ struct ContentView : View {
                         Rectangle()
                             .fill(colorScheme == .dark ? Color.black : Color.white)
                         .frame(height: geometry.safeAreaInsets.bottom)
-                    }.edgesIgnoringSafeArea(.bottom)
+                    }
+                    .edgesIgnoringSafeArea(.bottom)
                 }
             }
         }

@@ -16,14 +16,16 @@ class MemStorage {
         var curr: LocationEntry = locations[0]
         for location in locations {
             if location.id == id {
-                print(location)
-                print(location)
-                print(location)
-                print(location)
                 curr = location
-//                return location
             }
         }
         return curr
+    }
+    
+    static func shareLocation(id: String) {
+        let location = getLocationById(id: id)
+        let message = "Hey, I think you should check out \(location.name). You can find out more about it on Metrolens"
+        let activityView = UIActivityViewController(activityItems: [message], applicationActivities: nil)
+        UIApplication.shared.windows.first?.rootViewController?.present(activityView, animated: true, completion: nil)
     }
 }

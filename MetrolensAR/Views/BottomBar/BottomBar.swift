@@ -26,7 +26,10 @@ public struct BottomBar : View {
     
     func itemView(at index: Int) -> some View {
         Button(action: {
-            withAnimation { self.selectedIndex = index }
+            withAnimation {
+                self.selectedIndex = index
+                StateManager.manager.publish(key: CHART_TOGGLE_EVENT, payload: false)
+            }
         }) {
             BottomBarItemView(selected: self.$selectedIndex,
                               index: index,

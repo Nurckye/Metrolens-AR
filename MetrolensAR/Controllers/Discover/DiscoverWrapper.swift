@@ -9,19 +9,14 @@
 import SwiftUI
 
 struct DiscoverWrapper: View {
-    @State var isChart = false
     @State var data = DiscoverView.getLocationsToDisplay(showLikes: false)
     
     var body: some View {
         ZStack {
             DiscoverView(
-                isChart: $isChart,
                 data: $data,
                 title: "Discover"
             )
-//            .sheet(isPresented: $isChart) {
-//                PlaceChartView(isChart: self.$isChart)
-//            }
         }
     }
 }

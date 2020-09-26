@@ -31,7 +31,7 @@ struct ContentFragment: View {
             ImageWithCaption(
                 imageUrl: imageUrl,
                 title: "Another view:"
-            ).padding(.top).padding(.bottom)
+            ).padding(.top).padding(.bottom).frame(maxHeight: 300)
             
             Text(bottomText)
         }.padding()

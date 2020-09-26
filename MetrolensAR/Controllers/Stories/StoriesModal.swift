@@ -25,7 +25,18 @@ struct StoriesModal: View {
                         proxy.image
                             .resizable()
                             .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            .clipped()
                             .edgesIgnoringSafeArea(.all)
+                            .blur(radius: 20)
+                    }
+                    URLImage(item.image) { proxy in
+                        proxy.image
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .clipped()
+                            .edgesIgnoringSafeArea(.all)
+                            .cornerRadius(16)
+                            .padding()
                     }
                     VStack {
                         Spacer()

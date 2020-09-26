@@ -3,7 +3,6 @@ import URLImage
 
 
 struct DiscoverView : View {
-    @Binding var isChart: Bool
     @Binding var data: [Card]
     @State var shouldScroll: Bool = true
     @State var hero = false
@@ -55,7 +54,7 @@ struct DiscoverView : View {
                             ForEach(0..<self.data.count) { i in
                                 
                                     GeometryReader { g in
-                                        CardView(data: self.$data[i], hero: self.$hero, isChart: self.$isChart)
+                                        CardView(data: self.$data[i], hero: self.$hero)
                                             .offset(y: self.data[i].expand ? -g.frame(in: .global).minY : 0) // se duce la 0 (adica sus) cand e expanded
                                             .opacity(self.hero ? (self.data[i].expand ? 1 : 0) : 1)
                                             .onTapGesture {
@@ -82,7 +81,6 @@ struct DiscoverView : View {
 struct CardView: View {
     @Binding var data: Card
     @Binding var hero: Bool
-    @Binding var isChart: Bool
     
     var body: some View {
         ZStack(alignment: .topTrailing) {
@@ -108,13 +106,16 @@ struct CardView: View {
                     }.cornerRadius(self.data.expand ? 0 : 25)
                 }
     
-                // lista de like navigate stats
                 if self.data.expand {
                     VStack {
                         HStack(spacing: 32) {
-                            SmallAction(action: {}, isPressed: false, icon: "location", title: "Locate")
                             SmallAction(action: {
-                                withAnimation { self.isChart = true }
+                                MemStorage.shareLocation(id: self.data.id)
+                            }, isPressed: false, icon: "square.and.arrow.up", title: "Share")
+                            SmallAction(action: {
+                                withAnimation {
+                                    StateManager.manager.publish(key: CHART_SELECTED_EVENT, payload: self.data.id)
+                                }
                             }, isPressed: false, icon: "chart.bar", title: "Stats")
                             SmallAction(action: {
                                 self.data.isLiked = !self.data.isLiked

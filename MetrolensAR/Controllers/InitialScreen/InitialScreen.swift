@@ -10,12 +10,10 @@ struct InitialScreen: View, CallbackResultHandler {
     @Environment(\.colorScheme) var colorScheme
 
     func onResultSuccess() {
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 1.6) {
-            self.loaded = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.6) {
-                self.ready = true
-            }
-//        }
+        self.loaded = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.6) {
+            self.ready = true
+        }
     }
     
     func onResultFailure() {

@@ -11,8 +11,10 @@ import URLImage
 
 
 struct ModalSheetScreen: View {
-    @State var isChart = false
     @Binding var data: Card
+    @State var isLiked: Bool
+    @Environment(\.presentationMode) var presentationMode
+
     
     var body: some View {
         ZStack(alignment: .topTrailing) {
@@ -54,17 +56,25 @@ struct ModalSheetScreen: View {
                         y: 16 - 150)
                 }
     
-                // lista de like navigate stats
              
                 VStack {
-                    HStack(spacing: 32) {
-                        SmallAction(action: {}, isPressed: false, icon: "location", title: "Locate")
+                    HStack(spacing: 36) {
                         SmallAction(action: {
-                            withAnimation { self.isChart = true }
+                            self.presentationMode.wrappedValue.dismiss()
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                                MemStorage.shareLocation(id: self.data.id)
+                            }
+                        }, isPressed: false, icon: "square.and.arrow.up", title: "Share")
+                        SmallAction(action: {
+                            withAnimation {
+                                StateManager.manager.publish(key: CHART_SELECTED_EVENT, payload: self.data.id)
+                            }
                         }, isPressed: false, icon: "chart.bar", title: "Stats")
                         SmallAction(action: {
                             self.data.isLiked = !self.data.isLiked
-                        }, isPressed: self.data.isLiked, icon: "heart", title: "Like ")
+                            isLiked = self.data.isLiked
+                            
+                        }, isPressed: isLiked, icon: "heart", title: "Like ")
                     }.padding()
                     Details(id: Int(self.data.id) ?? -1)
                 }

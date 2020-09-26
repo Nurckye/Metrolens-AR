@@ -9,21 +9,14 @@
 import SwiftUI
 
 struct LikesView: View {
-    @State var isChart = false
     @State var data = DiscoverView.getLocationsToDisplay(showLikes: true)
 
     var body: some View {
         ZStack {
-            if isChart {
-                PlaceChartView(isChart: $isChart)
-                    .transition(.asymmetric(insertion: .opacity, removal: .move(edge: .bottom)))
-            } else {
-                DiscoverView(
-                    isChart: $isChart,
-                    data: $data,
-                    title: "Likes"
-                ).transition(.asymmetric(insertion: .slide, removal: .opacity))
-            }
+            DiscoverView(
+                data: $data,
+                title: "Likes"
+            ).transition(.asymmetric(insertion: .slide, removal: .opacity))   
         }
     }
 }
