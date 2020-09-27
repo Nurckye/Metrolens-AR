@@ -35,6 +35,7 @@ class CurrentLocationObserver: NSObject {
 
 class LocationService: NSObject, CLLocationManagerDelegate {
     static let currentLocation = CurrentLocationData()
+    static var currentAltitude: CLLocationDistance = 30
     
     static var shared = LocationService()
     let locationManager = CLLocationManager()
@@ -57,8 +58,15 @@ class LocationService: NSObject, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let altitude = manager.location?.altitude {
+            LocationService.currentAltitude = altitude
+        }
+        
         guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+     
+        
         print("locations = \(locValue.latitude) \(locValue.longitude)")
         LocationService.currentLocation.coordinates = locValue
+        StateManager.manager.publish(key: USER_LOCATION_CHANGED_EVENT, payload: locValue)
     }
 }

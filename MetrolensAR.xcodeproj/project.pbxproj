@@ -66,6 +66,7 @@
 		1795469A2502FAB90033BB7F /* filterCoordinatesInProximity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179546992502FAB90033BB7F /* filterCoordinatesInProximity.swift */; };
 		1795469C2502FBAC0033BB7F /* getUserDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1795469B2502FBAC0033BB7F /* getUserDistance.swift */; };
 		1795469E250302620033BB7F /* SightSector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1795469D250302620033BB7F /* SightSector.swift */; };
+		17A9B0272520DD0F0027350F /* AboutScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A9B0262520DD0F0027350F /* AboutScreen.swift */; };
 		17AF29072516D42E009C5FD8 /* CustomPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AF29062516D42E009C5FD8 /* CustomPageControl.swift */; };
 		17B0714D251B9DD2002A9B24 /* LocationAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B0714C251B9DD2002A9B24 /* LocationAnnotationView.swift */; };
 		17B07151251BA0F0002A9B24 /* LocationPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B07150251BA0F0002A9B24 /* LocationPointAnnotation.swift */; };
@@ -144,6 +145,7 @@
 		179546992502FAB90033BB7F /* filterCoordinatesInProximity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = filterCoordinatesInProximity.swift; sourceTree = "<group>"; };
 		1795469B2502FBAC0033BB7F /* getUserDistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getUserDistance.swift; sourceTree = "<group>"; };
 		1795469D250302620033BB7F /* SightSector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightSector.swift; sourceTree = "<group>"; };
+		17A9B0262520DD0F0027350F /* AboutScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutScreen.swift; sourceTree = "<group>"; };
 		17AF29062516D42E009C5FD8 /* CustomPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageControl.swift; sourceTree = "<group>"; };
 		17B0714C251B9DD2002A9B24 /* LocationAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAnnotationView.swift; sourceTree = "<group>"; };
 		17B07150251BA0F0002A9B24 /* LocationPointAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPointAnnotation.swift; sourceTree = "<group>"; };
@@ -337,6 +339,7 @@
 		1768FF1024F9AFA8003A6AE3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				17A9B0252520DCFC0027350F /* Profile */,
 				17B07157251BB1E0002A9B24 /* ModalSheetScreen */,
 				17F7668A2517C67500FCD70C /* Stories */,
 				176869E825160DCA00D1BE43 /* Details */,
@@ -444,6 +447,14 @@
 				179546942502EB470033BB7F /* LocationService.swift */,
 			);
 			path = LocationService;
+			sourceTree = "<group>";
+		};
+		17A9B0252520DCFC0027350F /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				17A9B0262520DD0F0027350F /* AboutScreen.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		17B0714F251B9FFF002A9B24 /* MapPin */ = {
@@ -699,6 +710,7 @@
 				17DC8A5A24FAB8E900630EFB /* GraphQL.swift in Sources */,
 				1708FF2F24F950820054197A /* NavigationLocation.swift in Sources */,
 				1708FF3224F950820054197A /* ContentView.swift in Sources */,
+				17A9B0272520DD0F0027350F /* AboutScreen.swift in Sources */,
 				1708FF2A24F950820054197A /* BottomBarItemView.swift in Sources */,
 				17B5BD9B2518E5BC00A2B687 /* hasNotch.swift in Sources */,
 				1708FF1E24F950820054197A /* PlaceChartView.swift in Sources */,

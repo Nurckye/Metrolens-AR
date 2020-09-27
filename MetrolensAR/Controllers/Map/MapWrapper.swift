@@ -68,9 +68,9 @@ struct MapWrapper: View {
                 isCamera = true
                 self.showingDetail = true
             }) {
-                HStack(spacing: 12) {
-                    Image(systemName: "camera").font(.system(size: 24))
-                    Text("AR").font(.custom("AvenirNext-MediumBold", size: 18))
+                HStack(spacing: 14) {
+                    Image(systemName: "arkit").font(.system(size: 24))
+                    Text("AR").font(.custom("AvenirNext-MediumBold", size: 20))
                 }
             }
             .padding(24)

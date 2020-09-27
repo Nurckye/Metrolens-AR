@@ -1,11 +1,14 @@
 import SwiftUI
+import MapKit
 import URLImage
-
+import Combine
 
 struct DiscoverView : View {
     @Binding var data: [Card]
     @State var shouldScroll: Bool = true
     @State var hero = false
+    @State var subscriber: AnyCancellable? = nil
+    @State var currentLocationCoord: CLLocationCoordinate2D? = nil
     var title: String
     
     static func getLocationsToDisplay(showLikes: Bool) -> [Card] {
@@ -52,13 +55,16 @@ struct DiscoverView : View {
                         StoriesSmall(data: data).padding(.bottom, 32).opacity(hero ? 0 : 1) 
                         VStack(spacing: 65) {
                             ForEach(0..<self.data.count) { i in
-                                
                                     GeometryReader { g in
-                                        CardView(data: self.$data[i], hero: self.$hero)
-                                            .offset(y: self.data[i].expand ? -g.frame(in: .global).minY : 0) // se duce la 0 (adica sus) cand e expanded
-                                            .opacity(self.hero ? (self.data[i].expand ? 1 : 0) : 1)
-                                            .onTapGesture {
-                                                withAnimation(.interactiveSpring(response: 0.5, dampingFraction: 0.8, blendDuration: 0)){
+                                        CardView(
+                                            data: self.$data[i],
+                                            hero: self.$hero,
+                                            currentLocationCoord: self.$currentLocationCoord
+                                        )
+                                        .offset(y: self.data[i].expand ? -g.frame(in: .global).minY : 0) // se duce la 0 (adica sus) cand e expanded
+                                        .opacity(self.hero ? (self.data[i].expand ? 1 : 0) : 1)
+                                        .onTapGesture {
+                                            withAnimation(.interactiveSpring(response: 0.5, dampingFraction: 0.8, blendDuration: 0)){
                                                 if !self.data[i].expand {
                                                     self.hero.toggle()
                                                     self.data[i].expand.toggle()
@@ -72,6 +78,10 @@ struct DiscoverView : View {
                     }
                 }
             }
+        }.onAppear {
+            subscriber = StateManager.manager.subscribe(key: USER_LOCATION_CHANGED_EVENT) { (location: CLLocationCoordinate2D) in
+                currentLocationCoord = location
+            }
         }
     }
 }
@@ -81,6 +91,8 @@ struct DiscoverView : View {
 struct CardView: View {
     @Binding var data: Card
     @Binding var hero: Bool
+    @Binding var currentLocationCoord: CLLocationCoordinate2D?
+
     
     var body: some View {
         ZStack(alignment: .topTrailing) {
@@ -99,7 +111,7 @@ struct CardView: View {
                            }
                            Spacer()
                            HStack {
-                               Text("25 m").font(.headline)
+                            Text("\(formatDistance(rawValue: getUserDistance(from: MemStorage.getLocationById(id: self.data.id).coordinates)))").font(.headline)
                                Image(systemName: "location")
                            }
                        }.padding(.leading).padding(.trailing)

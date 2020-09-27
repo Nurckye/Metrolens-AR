@@ -20,3 +20,12 @@ func getUserDistance(from point: CLLocationCoordinate2D) -> Double {
     )
     return userLocation.distance(from: pointLocation)
 }
+
+func formatDistance(rawValue: Double) -> String {
+    let value = Int(rawValue)
+    if value > 1000 {
+        return "\(value / 1000) km"
+    }
+    
+    return "\(value) m"
+}

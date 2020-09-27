@@ -27,7 +27,8 @@ struct ContentPicker: View {
             DiscoverWrapper().isHidden(which != NavigationLocation.Discover || isChart)
             
             LikesView().isHidden(which != NavigationLocation.Likes || isChart)
-            
+            AboutScreen().isHidden(which != NavigationLocation.Profile || isChart)
+
             if isChart {
                 PlaceChartView(location: selectedChartLocation!)
                     .transition( AnyTransition.opacity)
