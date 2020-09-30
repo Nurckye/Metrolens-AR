@@ -20,7 +20,7 @@ https://github.com/Nurckye/MetrolensAR-GraphQL-API
 ## Requirements
 Building the project requires the latest version of XCode as well as the latest IOS or IPadOS version (14 or above) and CocoaPods.
 
-
+[Imgur](https://imgur.com/5YXkpBV)
 ## Functionalities & Features
 
 * Full native dark mode / light mode support
@@ -29,3 +29,8 @@ Building the project requires the latest version of XCode as well as the latest 
 * Caching results to reduce data usage (for traveling abroad)
 * Intuitive layout based mostly on vertical finger swipes and reachability
 * Hardware-oriented (gyroscope, accelerometer, GPS) AR vision tracking for increased precision regardless the lighting conditions 
+
+Statistics Screen (Dark Mode)           |  Location Details Screen (Dark Mode)      |
+:-------------------------: | :-------------------------
+![](https://github.com/Nurckye/MetrolensAR/blob/master/gh-assets/IMG_0100.PNG)  |  ![](https://github.com/Nurckye/MetrolensAR/blob/master/gh-assets/IMG_0103.PNG) 
+
