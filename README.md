@@ -11,8 +11,21 @@ Map Screen           |  AR Screen       |                Discover Screen
 ![](https://github.com/Nurckye/MetrolensAR/blob/master/gh-assets/IMG_0094.PNG)  |  ![](https://github.com/Nurckye/MetrolensAR/blob/master/gh-assets/IMG_0097.PNG) | ![](https://github.com/Nurckye/MetrolensAR/blob/master/gh-assets/IMG_0095.PNG)
 
 ## Backend
+<img align="right" width="300" height="532" src="https://github.com/Nurckye/MetrolensAR/blob/master/gh-assets/IMG_0098.PNG" />
+
 The content is served using a Django/ GraphQL API. The repository for the backend infrastructure can be found here: 
+
 https://github.com/Nurckye/MetrolensAR-GraphQL-API
 
 ## Requirements
-Building the project requires the latest version of XCode as well as the latest IOS or IPadOS version (14 or above).
+Building the project requires the latest version of XCode as well as the latest IOS or IPadOS version (14 or above) and CocoaPods.
+
+
+## Functionalities & Features
+
+* Full native dark mode / light mode support
+* Current location tracking
+* Posibility to like, share and view stats for a certain location
+* Caching results to reduce data usage (for traveling abroad)
+* Intuitive layout based mostly on vertical finger swipes and reachability
+* Hardware-oriented (gyroscope, accelerometer, GPS) AR vision tracking for increased precision regardless the lighting conditions 
