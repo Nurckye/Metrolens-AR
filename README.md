@@ -1,12 +1,18 @@
 # Metrolens AR
-## A visualizer for the world around you 
+![](https://github.com/Nurckye/MetrolensAR/blob/master/gh-assets/logo.png) 
+
+## A visualizer for the world around you - AlgoExpert 2020 Summer-Fall Contest
 Metrolens AR is a native IOS application written using SwiftUI and Combine framework that aims to help people travelling or commuting discover their city in an AR environment. 
 
-My goal for this application was to allow the users to easily navigate the city they want to explore, with a simple and intuitive UI/UX experience by harvnessing the native power of ARKit.
+My goal for this application was to allow the users to easily navigate the city they want to explore, with a simple and intuitive UI/UX experience by harnessing the native power of ARKit.
+
+Map Screen           |  AR Screen       |                Discover Screen
+:-------------------------:|:-------------------------: | :-------------------------
+![](https://github.com/Nurckye/MetrolensAR/blob/master/gh-assets/IMG_0094.PNG)  |  ![](https://github.com/Nurckye/MetrolensAR/blob/master/gh-assets/IMG_0097.PNG) | ![](https://github.com/Nurckye/MetrolensAR/blob/master/gh-assets/IMG_0095.PNG)
 
 ## Backend
-The content is served using a Django/ GraphQL API. The repository of the project can be found here: 
+The content is served using a Django/ GraphQL API. The repository for the backend infrastructure can be found here: 
 https://github.com/Nurckye/MetrolensAR-GraphQL-API
 
 ## Requirements
-Building the project requires the latest version of XCode as well as the latest IOS or IPadOS version.
+Building the project requires the latest version of XCode as well as the latest IOS or IPadOS version (14 or above).
