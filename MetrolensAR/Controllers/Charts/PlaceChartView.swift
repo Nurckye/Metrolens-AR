@@ -13,6 +13,7 @@ struct PlaceChartView: View {
     var location: LocationEntry
     
     var body: some View {
+        ScrollView {
         ZStack {
             VStack {
                 LineView(
@@ -82,6 +83,7 @@ struct PlaceChartView: View {
                 }.padding()
                 Spacer()
             }
+        }
         }
     }
 }
