@@ -25,7 +25,6 @@ https://github.com/Nurckye/MetrolensAR-GraphQL-API
 ## Requirements
 Building the project requires the latest version of XCode as well as the latest IOS or IPadOS version (14 or above) and CocoaPods.
 
-[Imgur](https://imgur.com/5YXkpBV)
 ## Functionalities & Features
 
 * Full native dark mode / light mode support
